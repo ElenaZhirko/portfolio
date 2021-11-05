@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Print Test Case: Поиск лекарства по МНН через поле "Поиск" в выбранном городе</title>
+<link type="text/css" rel="stylesheet" href="Test_Case_TestLink_files/tl_documents.css">
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+<script type="text/javascript" src="Test_Case_TestLink_files/testlink_library.js" language="javascript"></script>
+<script type="text/javascript" language="javascript"><!-- var fRoot = 'http://testlink.testbase.ru/'; --></script>
+
+<script src="Test_Case_TestLink_files/prompt.js"></script></head>
+<body><p>&nbsp;</p><div> <table class="tc" style="margin-left: 0;" width="90%"><tbody><tr><th colspan="4">Тест Test-420: Поиск лекарства по МНН через поле "Поиск" в выбранном городе&nbsp;<span style="font-size: 80%;">[Версия : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Автор:</span></td><td colspan="3">elena_zhirko - 03.07.2021 20:50:21</td></tr>
+<tr><td colspan="4"><span class="label">Условия:</span><br><p>В базе данных сайта созданы лекарства с МНН(международным непатентованным названием) в регионах Минск, Брест, Витебск:</p>
+
+<table style="width:500px" cellspacing="1" cellpadding="1" border="1">
+	<tbody>
+		<tr>
+			<td>Минск</td>
+			<td>Брест</td>
+			<td>Витебск</td>
+		</tr>
+		<tr>
+			<td>левоцетиризин</td>
+			<td>ибупрофен мазь</td>
+			<td>ибупрофен гель</td>
+		</tr>
+		<tr>
+			<td>ибупрофен мазь</td>
+			<td>хлоргексидин</td>
+			<td>парацетамол</td>
+		</tr>
+		<tr>
+			<td>мелоксикам</td>
+			<td>биклотимол</td>
+			<td>лизин</td>
+		</tr>
+		<tr>
+			<td>аспартам</td>
+			<td>ибупрофен таблетки</td>
+			<td>дротаверин</td>
+		</tr>
+		<tr>
+			<td>пантопразол</td>
+			<td>аскорбиновая кислота</td>
+			<td>диклофенак</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Шаги:</span></td><td><span class="label">Ожидаемая реакция:</span></td></tr><tr><td width="5">1</td><td><p>Открыть сайт <a href="https://tabletka.by/">https://tabletka.by/</a></p>
+</td><td><p>Открылась главная страница сайта</p>
+</td></tr><tr><td width="5">3</td><td><p>В поле "Все регионы" выбрать город: Брест</p>
+</td><td><p>В поле "Все регионы" введен: Брест</p>
+</td></tr><tr><td width="5">4</td><td><p>В поле "Поиск" ввести наименование лекарства по МНН: ибупрофен</p>
+</td><td><p>В поле "Поиск" введен: ибупрофен</p>
+</td></tr><tr><td width="5">5</td><td><p>Нажать клавишу Enter либо значок лупы (найти)</p>
+</td><td><ol>
+	<li>Над таблицей найденных лекарств уведомление: "Ибупрофен в регионе Брест".</li>
+	<li>В результатах поиска показаны только лекарства, имеющие в МНН 
+Ибупрофен. В колонке "Цены" показан диапазон цен и количество аптек, в 
+которых присутствует лекарство.</li>
+</ol>
+</td></tr><tr><td width="5">6</td><td><p>Выбрать в списке лекарств "Ибупрофен мазь"</p>
+</td><td><p>Открылась страница с таблицей, включающей аптеки с адресом в г. Брест и ценами на выбранное лекарство</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Способ прогона:</span></td><td colspan="3">Вручную</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Ожидаемая продолжительность прогона (мин):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Важность:</span></td><td colspan="3">Высокая</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Требования</span></td><td colspan="3">&nbsp;нет<br></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Ключевые слова:</span></td><td colspan="3">&nbsp;нет<br></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Platforms:</span></td><td colspan="3">&nbsp;нет<br></td></tr>
+</tbody></table>
+</div>
+</body></html>

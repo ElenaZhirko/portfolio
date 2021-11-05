@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html><head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+	<title>0003203: При вводе спецсимволов в строку Поиска появляется сообщение об ошибке 404 - MantisBT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="Bug_3203_%20MantisBT_files/default.css">
+	<link rel="stylesheet" type="text/css" href="Bug_3203_%20MantisBT_files/status_config.css">
+	<link rel="stylesheet" type="text/css" href="Bug_3203_%20MantisBT_files/dropzone-4.css">
+	<link rel="stylesheet" type="text/css" href="Bug_3203_%20MantisBT_files/bootstrap-3.css">
+	<link rel="stylesheet" type="text/css" href="Bug_3203_%20MantisBT_files/font-awesome-4.css">
+	<link rel="stylesheet" type="text/css" href="Bug_3203_%20MantisBT_files/fonts.css">
+	<link rel="stylesheet" type="text/css" href="Bug_3203_%20MantisBT_files/bootstrap-datetimepicker-4.css">
+	<link rel="stylesheet" type="text/css" href="Bug_3203_%20MantisBT_files/ace.css">
+	<link rel="stylesheet" type="text/css" href="Bug_3203_%20MantisBT_files/ace-mantis.css">
+	<link rel="stylesheet" type="text/css" href="Bug_3203_%20MantisBT_files/ace-skins.css">
+
+	<link rel="shortcut icon" href="http://mantisbt.testbase.ru/images/favicon.ico" type="image/x-icon">
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: полнотекстовый поиск" href="http://mantisbt.testbase.ru/browser_search_plugin.php?type=text">
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: поиск по ID проблемы" href="http://mantisbt.testbase.ru/browser_search_plugin.php?type=id">
+	<script type="text/javascript" src="Bug_3203_%20MantisBT_files/javascript_config.php"></script>
+	<script type="text/javascript" src="Bug_3203_%20MantisBT_files/javascript_translations.php"></script>
+	<script type="text/javascript" src="Bug_3203_%20MantisBT_files/jquery-2.js"></script>
+	<script type="text/javascript" src="Bug_3203_%20MantisBT_files/dropzone-4.js"></script>
+	<script type="text/javascript" src="Bug_3203_%20MantisBT_files/common.js"></script>
+<script src="Bug_3203_%20MantisBT_files/prompt.js"></script></head>
+<body id="view-issue-page" class="skin-3">
+<style>
+* { font-family: "Open Sans"; } 
+h1, h2, h3, h4, h5 { font-family: "Open Sans"; } 
+</style>
+<div id="navbar" class="navbar navbar-default navbar-collapse navbar-fixed-top noprint"><div id="navbar-container" class="navbar-container"><button id="menu-toggler" type="button" class="navbar-toggle menu-toggler pull-left hidden-lg hidden-md" data-target="#sidebar"><span class="sr-only">Toggle sidebar</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="navbar-header"><a href="http://mantisbt.testbase.ru/my_view_page.php" class="navbar-brand"><span class="smaller-75"> MantisBT </span></a><button type="button" class="navbar-toggle navbar-toggle collapsed pull-right hidden-sm hidden-md hidden-lg" data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu"><span class="sr-only">Toggle user menu</span><i class="ace-icon fa fa-user fa-2x white"></i> </button></div><div class="navbar-buttons navbar-header navbar-collapse collapse"><ul class="nav ace-nav"><li class="hidden-sm hidden-xs"><div class="btn-group btn-corner padding-right-8 padding-left-8"><a class="btn btn-primary btn-sm" href="http://mantisbt.testbase.ru/bug_report_page.php"><i class="fa fa-edit"></i> Создать задачу</a></div></li><li class="grey" id="dropdown_projects_menu">
+<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+&nbsp;Школа-108&nbsp;
+ <i class="ace-icon fa fa-angle-down bigger-110"></i>
+</a>
+<ul class="dropdown-menu dropdown-menu-right dropdown-yellow dropdown-caret dropdown-close scrollable-menu">
+<li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=0">Все проекты </a></li>
+<li class="divider"></li>
+<li><div id="projects-list"><div class="projects-searchbox"><input class="search form-control input-md" placeholder="Поиск"></div><ul class="list dropdown-yellow no-margin"><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=1" class="project-link"> Test </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=71" class="project-link"> Школа-100 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=72" class="project-link"> Школа-101 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=73" class="project-link"> Школа-102 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=74" class="project-link"> Школа-103 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=75" class="project-link"> Школа-104 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=76" class="project-link"> Школа-105 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=77" class="project-link"> Школа-106 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=78" class="project-link"> Школа-107 </a></li><li class="active"><a href="http://mantisbt.testbase.ru/set_project.php?project_id=79" class="project-link"> Школа-108 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=80" class="project-link"> Школа-109 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=81" class="project-link"> Школа-110 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=82" class="project-link"> Школа-111 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=83" class="project-link"> Школа-112 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=84" class="project-link"> Школа-113 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=85" class="project-link"> Школа-114 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=86" class="project-link"> Школа-115 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=87" class="project-link"> Школа-116 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=89" class="project-link"> Школа-118 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=91" class="project-link"> Школа-120 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=53" class="project-link"> Школа-82 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=67" class="project-link"> Школа-96 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=68" class="project-link"> Школа-97 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=69" class="project-link"> Школа-98 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=70" class="project-link"> Школа-99 </a></li><li><a href="http://mantisbt.testbase.ru/set_project.php?project_id=97" class="project-link"> ШНАТ-продление </a></li></ul></div></li></ul>
+</li>
+<li class="grey"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><i class="ace-icon fa fa-user fa-2x white"></i> <span class="user-info">student_kewin</span><i class="ace-icon fa fa-angle-down"></i></a><ul class="user-menu dropdown-menu dropdown-menu-right dropdown-yellow dropdown-caret dropdown-close"><li><a href="http://mantisbt.testbase.ru/account_page.php"><i class="ace-icon fa fa-user"> </i> Мой аккаунт</a></li><li><a href="http://mantisbt.testbase.ru/issues_rss.php?username=student_kewin&amp;key=X1gqQwCgvxl2tavPOUvHmKfME2KMIeXBugq_-lWftsMNmmdoOP4x1kOzy0yjjGdiQeCLaQQWOxmlDCj5nQXV&amp;project_id=79"><i class="ace-icon fa fa-rss-square orange"> </i> Каналы RSS</a></li><li class="divider"></li><li><a href="http://mantisbt.testbase.ru/logout_page.php"><i class="ace-icon fa fa-sign-out"> </i> Выход</a></li></ul></li></ul></div></div></div><div class="main-container" id="main-container" style="padding-top: 45px;">
+<div id="sidebar" class="sidebar sidebar-fixed responsive compact "><ul class="nav nav-list"><li>
+<a href="http://mantisbt.testbase.ru/my_view_page.php">
+<i class="menu-icon fa fa-dashboard"></i> 
+<span class="menu-text"> Обзор </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li class="active">
+<a href="http://mantisbt.testbase.ru/view_all_bug_page.php">
+<i class="menu-icon fa fa-list-alt"></i> 
+<span class="menu-text"> Список задач </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="http://mantisbt.testbase.ru/bug_report_page.php">
+<i class="menu-icon fa fa-edit"></i> 
+<span class="menu-text"> Создать задачу </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="http://mantisbt.testbase.ru/changelog_page.php">
+<i class="menu-icon fa fa-retweet"></i> 
+<span class="menu-text"> Журнал </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="http://mantisbt.testbase.ru/roadmap_page.php">
+<i class="menu-icon fa fa-road"></i> 
+<span class="menu-text"> План </span>
+</a>
+<b class="arrow"></b>
+</li>
+</ul><div id="sidebar-btn" class="sidebar-toggle sidebar-collapse"><i data-icon2="ace-icon fa fa-angle-double-right" data-icon1="ace-icon fa fa-angle-double-left" class="ace-icon fa fa-angle-double-left"></i></div></div><div class="main-content">
+<div id="breadcrumbs" class="breadcrumbs noprint">
+<ul class="breadcrumb">
+  <li><i class="fa fa-user home-icon active"></i>  <a href="http://mantisbt.testbase.ru/account_page.php">student_kewin ( Тестировщик ) </a>
+  <span class="label hidden-xs label-default arrowed">разработчик</span></li>
+</ul>
+<div class="nav-recent hidden-xs">Недавние: <a href="http://mantisbt.testbase.ru/view.php?id=3203" title="[назначена] При вводе спецсимволов в строку Поиска появляется сообщение об ошибке 404">0003203</a>, <a href="http://mantisbt.testbase.ru/view.php?id=3529" title="[назначена] Ломается структура файла, если в нем первые колонки пустые">0003529</a>, <a href="http://mantisbt.testbase.ru/view.php?id=3375" title="[новая] Добавить возможность создать новую публикацию в web.">0003375</a>, <a href="http://mantisbt.testbase.ru/view.php?id=3374" title="[новая] Неподходящее сообщение при сохранении публикации.">0003374</a>, <a href="http://mantisbt.testbase.ru/view.php?id=3528" title="[новая] &lt;b&gt;Ломается структура файла, если в нем первые колонки пустые&lt;/b&gt;">0003528</a></div><div id="nav-search" class="nav-search"><form class="form-search" method="post" action="/jump_to_bug.php"><span class="input-icon"><input type="text" name="bug_id" autocomplete="off" class="nav-search-input" placeholder="Задача №"><i class="ace-icon fa fa-search nav-search-icon"></i></span></form></div>
+</div>
+  <div class="page-content">
+<div class="row">
+<div class="col-md-12 col-xs-12"><div class="widget-box widget-color-blue2"><div class="widget-header widget-header-small"><h4 class="widget-title lighter"><i class="ace-icon fa fa-bars"></i>Просмотр задачи</h4></div><div class="widget-body"><div class="widget-toolbox padding-8 clearfix noprint"><div class="btn-group pull-left"><a class="btn btn-primary btn-white btn-round btn-sm" href="http://mantisbt.testbase.ru/bug_reminder_page.php?bug_id=3203">Отправить напоминание</a><a class="btn btn-primary btn-white btn-round btn-sm" href="#bugnotes">Перейти к комментариям</a><a class="btn btn-primary btn-white btn-round btn-sm" href="#history">Перейти к истории</a></div><div class="btn-group pull-right"></div></div><div class="widget-main no-padding"><div class="table-responsive"><table class="table table-bordered table-condensed"><tfoot><tr class="noprint"><td colspan="6"><div class="btn-group"><div class="pull-left padding-right-8"><form method="post" action="bug_update_page.php" class="form-inline">
+	<fieldset><input type="hidden" name="bug_update_page_token" value="20211104cqypwVPFA_PqZGz-nWoCFBM6QyBX85FK">		<input type="hidden" name="bug_id" value="3203">
+		<input type="submit" class="btn btn-primary btn-sm btn-white btn-round" value="Изменить">
+	</fieldset></form>
+</div><div class="pull-left padding-right-8"><form method="post" action="bug_update.php" class="form-inline"><input type="hidden" name="bug_update_token" value="20211104SS7JVYkh6KRkspta2kfvEkeMVAihosub"><input type="hidden" name="last_updated" value="1625239894"><input type="hidden" name="action_type" value="assign"><input type="submit" class="btn btn-primary btn-sm btn-white btn-round" value="Назначить:"> <select class="input-sm" name="handler_id"><option value="1012" selected="selected">[Я]</option><option value="1012">[Инициатор]</option><option value="0"></option><option value="1">administrator</option><option value="8">aksi</option><option value="3">nataliia_vasileva</option><option value="1012">student_kewin</option><option value="4">yulia_mironova</option></select><input type="hidden" name="bug_id" value="3203">
+</form>
+</div><div class="pull-left padding-right-8"><form method="post" action="bug_change_status_page.php" class="form-inline"><input type="submit" class="btn btn-primary btn-sm btn-white btn-round" value="Перевести в:"> <select name="new_status" class="input-sm"><option value="10" selected="selected">новая</option><option value="20">обратная связь</option><option value="30">рассматривается</option><option value="40">подтверждена</option><option value="80">решена</option><option value="90">закрыта</option></select><input type="hidden" name="id" value="3203">
+<input type="hidden" name="change_type" value="change_status">
+</form>
+</div><div class="pull-left padding-right-2"><form method="post" action="bug_monitor_add.php" class="form-inline">
+	<fieldset><input type="hidden" name="bug_monitor_add_token" value="20211104pFR_36CcYO7-VPheFvB6kRYDKLlZLJyg">		<input type="hidden" name="bug_id" value="3203">
+		<input type="submit" class="btn btn-primary btn-sm btn-white btn-round" value="Отслеживать">
+	</fieldset></form>
+</div><div class="pull-left padding-right-2"><form method="post" action="bug_report_page.php" class="form-inline">
+	<fieldset><input type="hidden" name="bug_report_page_token" value="20211104_lx-eEJnX9lHCAoJaLX0EMtlytUCKtSw">		<input type="hidden" name="m_id" value="3203">
+		<input type="submit" class="btn btn-primary btn-sm btn-white btn-round" value="Клонировать">
+	</fieldset></form>
+</div><div class="pull-left padding-right-2"></div><div class="pull-left padding-right-2"><form method="post" action="bug_change_status_page.php" class="form-inline">
+	<fieldset><input type="hidden" name="bug_change_status_page_token" value="20211104RLWZHUWwUCuGCjPpGco2sCRDaAShW-B9">		<input type="hidden" name="id" value="3203">
+		<input type="hidden" name="new_status" value="90">
+		<input type="hidden" name="change_type" value="close">
+		<input type="submit" class="btn btn-primary btn-sm btn-white btn-round" value="Закрыть">
+	</fieldset></form>
+</div><div class="pull-left padding-right-2"><form method="post" action="bug_actiongroup_page.php" class="form-inline">
+	<fieldset><input type="hidden" name="bug_actiongroup_page_token" value="20211104a_rKhGA9laQkGdC_Ze-E7cjirvC6E9uH">		<input type="hidden" name="bug_arr[]" value="3203">
+		<input type="hidden" name="action" value="MOVE">
+		<input type="submit" class="btn btn-primary btn-sm btn-white btn-round" value="Переместить">
+	</fieldset></form>
+</div><div class="pull-left padding-right-2"><form method="post" action="bug_actiongroup_page.php" class="form-inline">
+	<fieldset><input type="hidden" name="bug_actiongroup_page_token" value="202111041drHIOtisbxQ1KBSeYAxZqF4ca8bEJje">		<input type="hidden" name="bug_arr[]" value="3203">
+		<input type="hidden" name="action" value="DELETE">
+		<input type="submit" class="btn btn-primary btn-sm btn-white btn-round" value="Удалить">
+	</fieldset></form>
+</div></div></td></tr></tfoot><tbody><tr class="bug-header"><th class="bug-id category" width="15%">Номер</th><th class="bug-project category" width="20%">Проект</th><th class="bug-category category" width="15%">Категория</th><th class="bug-view-status category" width="15%">Видимость</th><th class="bug-date-submitted category" width="15%">Создан</th><th class="bug-last-modified category" width="20%">Изменен</th></tr><tr class="bug-header-data"><td class="bug-id">0003203</td><td class="bug-project">Школа-108</td><td class="bug-category">[Все проекты] General</td><td class="bug-view-status">публичная</td><td class="bug-date-submitted">2021-07-02 18:16</td><td class="bug-last-modified">2021-07-02 18:31</td></tr><tr class="spacer"><td colspan="6"></td></tr><tr class="hidden"></tr><tr><th class="bug-reporter category">Инициатор</th><td class="bug-reporter">student_kewin</td><th class="bug-assigned-to category">Ответственный</th><td class="bug-assigned-to">yulia_mironova</td><td colspan="2">&nbsp;</td></tr><tr><th class="bug-priority category">Приоритет</th><td class="bug-priority">обычный</td><th class="bug-severity category">Влияние</th><td class="bug-severity">малое</td><th class="bug-reproducibility category">Воспроизводимость</th><td class="bug-reproducibility">всегда</td></tr><tr><th class="bug-status category">Состояние</th><td class="bug-status"><i class="fa fa-square fa-status-box status-50-color"></i> назначена</td><th class="bug-resolution category">Решение</th><td class="bug-resolution">открыта</td><td colspan="2">&nbsp;</td></tr><tr class="spacer"><td colspan="6"></td></tr><tr class="hidden"></tr><tr><th class="bug-summary category">Тема</th><td class="bug-summary" colspan="5">0003203: При вводе спецсимволов в строку Поиска появляется сообщение об ошибке 404</td></tr><tr><th class="bug-description category">Описание</th><td class="bug-description" colspan="5">-</td></tr><tr><th class="bug-steps-to-reproduce category">Шаги по воспроизведению</th><td class="bug-steps-to-reproduce" colspan="5"><b>Шаги по воспроизведению:</b><br>
+1. Открыть сайт <a href="https://tabletka.by/">https://tabletka.by/</a><br>
+2 .Ввести в строку поиска запрос со спецсимволами « :)(*_ »<br>
+3.Нажать ввод<br>
+<br>
+<b>Фактический результат:</b> На странице сайта сообщение «404  Страница
+ не найдена. Запрашиваемая вами страница не существует или у вас 
+оказалась неверная ссылка. Попробуйте начать с начала.»<br>
+<br>
+<b>Ожидаемый результат:</b> Сообщение: « По вашему запросу ничего не найдено. Что можно сделать:<br>
+-•	Убедитесь в правильности написания наименования. В первую очередь осуществляйте поиск на русском языке.»</td></tr><tr><th class="bug-tags category">Метки</th><td class="bug-tags" colspan="5">Нет связанных меток.</td></tr><tr class="noprint"><th class="bug-attach-tags category">Добавить метки</th><td class="bug-attach-tags" colspan="5">	<form method="post" action="tag_attach.php" class="form-inline">
+	<input type="hidden" name="tag_attach_token" value="202111040gKB9rvVm5VU4_e7V4-WARIpvRMJY1sy">	<label class="inline small">(разделять ',')</label>
+	<input type="hidden" name="bug_id" value="3203" class="input-sm">
+		<input type="hidden" id="tag_separator" value=",">
+	<input type="text" name="tag_string" id="tag_string" class="input-sm" size="40">
+	<select class="input-sm" tabindex="1" name="tag_select" id="tag_select">
+		<option value="0" selected="selected">&lt;Метки&gt;</option><option value="16" title="">   </option><option value="2" title="">12345678</option><option value="31" title="">21</option><option value="72" title="">&lt;a href="ASOS"&gt;www.asos.com&lt;/a&gt;</option><option value="74" title="">&lt;a href="www.asos.com"&gt;ASOS&lt;/a&gt;</option><option value="85" title="">&lt;a href="Портал открытых данных РФ"&gt;https://data.gov.ru/&lt;/a&gt;</option><option value="17" title="">&lt;b&gt;</option><option value="68" title="">&lt;b&gt; БАГ&lt;/b&gt;</option><option value="60" title="">&lt;b&gt; жирный заголовок&lt;/b&gt;</option><option value="61" title="">&lt;b&gt; жирный заголовок&lt;b&gt;</option><option value="62" title="">&lt;b&gt;:&lt;b&gt;Шаги для воспроизведения:&lt;/b&gt;</option><option value="63" title="">&lt;b&gt;:&lt;b&gt;Шаги для воспроизведения:&lt;/b&gt;=Шаги(в режиме просмотра)</option><option value="59" title="">&lt;b&gt;:&lt;b&gt;шаги&lt;/b&gt;= Шаги (в режиме просмотра)</option><option value="32" title="">&lt;b&gt;:&lt;b&gt;шаги&lt;/b&gt;=Шаги(в режиме просмотра)</option><option value="41" title="">&lt;b&gt;arkadia&lt;/b&gt;</option><option value="70" title="">&lt;b&gt;bug&lt;/b&gt;</option><option value="71" title="">&lt;b&gt;improvement&lt;/b&gt;</option><option value="79" title="">&lt;b&gt;Завис календарь бронирования&lt;/b&gt;</option><option value="4" title="">&lt;b&gt;Загрузка фото&lt;/b&gt;</option><option value="12" title="">&lt;b&gt;Несоответствие информации адреса магазина и метка на карте&lt;/b&gt;</option><option value="9" title="">&lt;b&gt;Нет уведомления "введите запрос" при поиске через пустое поле&lt;/b&gt;</option><option value="6" title="">&lt;b&gt;Нет уведомления "введите запрос" при поиске через пустое поле&lt;/b&gt;=Нет уведомления "введите запрос</option><option value="7" title="">&lt;b&gt;Нет уведомления "введите запрос" при поиске через пустое поле&lt;/b&gt;=Нет уведомления "введите запрос</option><option value="8" title="">&lt;b&gt;Нет уведомления "введите запрос" при поиске через пустое поле&lt;/b&gt;=Нет уведомления "введите запрос</option><option value="10" title="">&lt;b&gt;Нет уведомления об исправлении орфографии и списка по исправленному запросу&lt;/b&gt;</option><option value="34" title="">&lt;b&gt;нововведение&lt;/b&gt;</option><option value="82" title="">&lt;b&gt;Ожидаемый результат:&lt;/b&gt;</option><option value="67" title="">&lt;b&gt;Ожидаемый результат:&lt;b&gt;</option><option value="13" title="">&lt;b&gt;Ожидаемый результат&lt;/b&gt;</option><option value="27" title="">&lt;b&gt;Ожидаемый результат&lt;/b&gt; = Ожидаемый результат</option><option value="20" title="">&lt;b&gt;Ожидаемый результат&lt;/b&gt;= в режиме просмотра</option><option value="46" title="">&lt;b&gt;Ожидаемый результат&lt;/b&gt;работает</option><option value="24" title="">&lt;b&gt;Разрешить отправлять первое сообщение человеку короче 15 символов&lt;/b&gt; = Разрешить отправлять перв</option><option value="14" title="">&lt;b&gt;Результат&lt;/b&gt;</option><option value="28" title="">&lt;b&gt;Результат&lt;/b&gt; = Результат</option><option value="25" title="">&lt;b&gt;Снять ограничение длину в 15 символов для первого сообщения&lt;/b&gt; = Снять ограничение длину в 15 си</option><option value="26" title="">&lt;b&gt;Снять ограничение на длину первого сообщения в 15 символов&lt;/b&gt; = Снять ограничение на длину перво</option><option value="15" title="">&lt;b&gt;Тема&lt;/b&gt;</option><option value="3" title="">&lt;b&gt;Улучшение&lt;/b&gt;</option><option value="81" title="">&lt;b&gt;Фактический результат: &lt;/b&gt;</option><option value="66" title="">&lt;b&gt;Фактический результат:&lt;/b&gt;</option><option value="65" title="">&lt;b&gt;Фактический результат&lt;/b&gt;</option><option value="23" title="">&lt;b&gt;Фактический результат&lt;/b&gt; = Фактический результат</option><option value="22" title="">&lt;b&gt;Шаг&lt;/b&gt; = Шаг</option><option value="52" title="">&lt;b&gt;Шаги воспроизведения&lt;/b&gt;</option><option value="64" title="">&lt;b&gt;Шаги для воспроизведения:&lt;/b&gt;</option><option value="44" title="">&lt;b&gt;Шаги для воспроизведения&lt;/b&gt;</option><option value="80" title="">&lt;b&gt;Шаги по воспроизведению:&lt;/b&gt;</option><option value="11" title="">&lt;b&gt;Шаги по воспроизведению&lt;/b&gt;</option><option value="5" title="">&lt;b&gt;Шаги по воспроизведению&lt;/b&gt;=Шаги по воспроизведению</option><option value="69" title="">&lt;b&gt;шаги:&lt;/b&gt;&lt;b&gt;полученный результат:&lt;/b&gt;&lt;b&gt;ожидаемый результат:&lt;/b&gt;</option><option value="73" title="">&lt;b&gt;Шаги&lt;/b&gt;</option><option value="19" title="">&lt;b&gt;Шаги&lt;/b&gt; = 12</option><option value="18" title="">&lt;b&gt;Шаги&lt;/b&gt; = Шаги</option><option value="21" title="">&lt;b&gt;Шаги&lt;/b&gt; = Шаги (в режиме просмотра)</option><option value="42" title="">&lt;reg&gt;</option><option value="57" title="">error notification</option><option value="91" title="">FedotovA</option><option value="30" title="">http://mantisbt.testbase.ru/tag_view_page.php?tag_id=21</option><option value="35" title="">https://p.instamart.ru/business/?sent_from=header</option><option value="36" title="">https://www.tokyo-city.ru/spisok-product-search.html?p_f_2_temp_id=116&amp;p_f_2_title=оплата</option><option value="1" title="">Q</option><option value="49" title="">ReadEra</option><option value="48" title="">Tag</option><option value="47" title="">Tags zuordnen</option><option value="83" title="">y</option><option value="76" title="">Yandex Музыка</option><option value="50" title="">Акция 5+1</option><option value="43" title="">аркадия</option><option value="87" title="">виджет</option><option value="37" title="">вылет</option><option value="38" title="">имя</option><option value="29" title="">Костыко Екатерина</option><option value="75" title="">Моя_машина</option><option value="39" title="">настройки профиля</option><option value="53" title="">нет  связанных меток</option><option value="58" title="">Нет связанных меток</option><option value="54" title="">Нет связанных меток.</option><option value="45" title="">Нет связных меток</option><option value="78" title="">Отрицательное количество</option><option value="51" title="">Поисковая строка</option><option value="55" title="">Рекламный баннер</option><option value="90" title="">СКБ КОНТУР</option><option value="89" title="">СКБ КОНТУР &lt;b&gt; БАГ&lt;/b&gt;</option><option value="40" title="">триваго</option><option value="88" title="">улучшения</option><option value="86" title="">чат</option><option value="84" title="">Шаги воспроизведения</option><option value="77" title="">Шаги для воспроизведения</option>	</select>
+	<input type="submit" value="Добавить" class="btn btn-primary btn-sm btn-white btn-round">
+	</form>
+</td></tr><tr class="spacer"><td colspan="6"></td></tr><tr class="hidden"></tr></tbody></table></div></div></div></div></div>	<div class="col-md-12 col-xs-12">
+	<div class="space-10"></div>
+
+		<div id="relationships" class="widget-box widget-color-blue2 ">
+	<div class="widget-header widget-header-small">
+		<h4 class="widget-title lighter">
+			<i class="ace-icon fa fa-sitemap"></i>
+			Связи		</h4>
+		<div class="widget-toolbar">
+			<a data-action="collapse" href="#">
+				<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+			</a>
+		</div>
+	</div>
+	<div class="widget-body">
+				<div class="widget-toolbox padding-8 clearfix">
+				<form method="post" action="bug_relationship_add.php" class="form-inline noprint">
+		<input type="hidden" name="bug_relationship_add_token" value="20211104gngP-AAfc7ub9EYK_A4_YvSfx8ebCdCC">		<input type="hidden" name="src_bug_id" value="3203">
+		<label class="inline">Текущая задача&nbsp;&nbsp;</label>
+		<select class="input-sm" name="rel_type">
+<option value="2">зависит от</option>
+<option value="3">блокирует</option>
+<option value="0">дублирует</option>
+<option value="4">дублируется</option>
+<option value="1" selected="selected">связана с</option>
+</select>
+		<input type="text" class="input-sm" name="dest_bug_id">
+		<input type="submit" class="btn btn-primary btn-sm btn-white btn-round" name="add_relationship" value="Добавить">
+		</form>
+					</div>
+		
+		<div class="widget-main no-padding">
+			<div class="table-responsive">
+							</div>
+		</div>
+	</div>
+	</div>
+	</div>
+<div class="col-md-12 col-xs-12"><a id="monitors"></a><div class="space-10"></div><div id="monitoring" class="widget-box widget-color-blue2 ">
+	<div class="widget-header widget-header-small">
+		<h4 class="widget-title lighter">
+			<i class="ace-icon fa fa-users"></i>
+			Отслеживающие		</h4>
+		<div class="widget-toolbar">
+			<a data-action="collapse" href="#">
+				<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+			</a>
+		</div>
+	</div>
+
+	<div class="widget-body">
+		<div class="widget-main no-padding">
+
+			<div class="table-responsive">
+				<table class="table table-bordered table-condensed table-striped">
+<tbody><tr>
+	<th class="category" width="15%">
+		Пользователи	</th>
+	<td>
+Никто из пользователей не отслеживает задачу.		<br><br>
+		<form method="get" action="bug_monitor_add.php" class="form-inline noprint">
+		<input type="hidden" name="bug_monitor_add_token" value="202111042ii0XbaLnSPH4iGJEgQjl1sCoL9jeca3">			<input type="hidden" name="bug_id" value="3203">
+			<label for="bug_monitor_list_username">Пользователь</label>
+			<input type="text" class="input-sm" id="bug_monitor_list_username" name="username">
+			<input type="submit" class="btn btn-primary btn-sm btn-white btn-round" value="Добавить">
+		</form>
+			</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-12 col-xs-12">
+<a id="attachments"></a>
+<a id="bugnotes"></a>
+<div class="space-10"></div>
+
+<div id="bugnotes" class="widget-box widget-color-blue2 ">
+<div class="widget-header widget-header-small">
+	<h4 class="widget-title lighter">
+	<i class="ace-icon fa fa-comments"></i>
+		Деятельность	</h4>
+	<div class="widget-toolbar">
+		<a data-action="collapse" href="#">
+			<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+		</a>
+	</div>
+	</div>
+	<div class="widget-body">
+	<div class="widget-main no-padding">
+	<div class="table-responsive">
+	<table class="table table-bordered table-condensed table-striped">
+<tbody><tr class="bugnote visible-on-hover-toggle" id="c4909">
+		<td class="category">
+		<div class="pull-left padding-2">		</div>
+		<div class="pull-left padding-2">
+		<p class="no-margin">
+			<i class="fa fa-user grey"></i> <a href="http://mantisbt.testbase.ru/view_user_page.php?id=1012">student_kewin</a>		</p>
+		<p class="no-margin small lighter">
+			<i class="fa fa-clock-o grey"></i> 2021-07-02 18:16					</p>
+		<p class="no-margin">
+			<span class="label label-sm label-default arrowed-in-right">разработчик</span>			&nbsp;
+					</p>
+				<div class="clearfix"></div>
+		<div class="space-2"></div>
+		<div class="btn-group visible-on-hover invisible">
+		<div class="pull-left"><a class="btn btn-primary btn-white btn-round btn-xs" href="http://mantisbt.testbase.ru/bug_file_delete.php?file_id=4909&amp;bug_file_delete_token=202111043Ze-DrvGe4ScbAEhb3A-3Q_5LgbzvJOO">Удалить</a></div>		</div>
+		</div>
+	</td>
+	<td class="bugnote-note">
+	
+<div id="attachment_preview_4909_open" class=" collapse-open noprint">
+<a href="http://mantisbt.testbase.ru/file_download.php?file_id=4909&amp;type=bug"><i class="fa fa-file-image-o" title="png file icon"></i></a> <a href="http://mantisbt.testbase.ru/file_download.php?file_id=4909&amp;type=bug">Ошибка 404 при вводе спецсимволов.png</a> (51,318 байт)<a class="noprint" href="http://mantisbt.testbase.ru/bug_file_delete.php?file_id=4909&amp;bug_file_delete_token=202111043Ze-DrvGe4ScbAEhb3A-3Q_5LgbzvJOO">
+			<i class="1 ace-icon fa fa-trash-o"></i></a> <a id="attachment_preview_4909_open_link" class="collapse-link noprint"><i class="fa fa-minus-square-o" title="-"></i></a>
+<div class="bug-attachment-preview-image"><a href="http://mantisbt.testbase.ru/file_download.php?file_id=4909&amp;type=bug"><img src="Bug_3203_%20MantisBT_files/file_download.png" alt="" style="border: 0; max-height:250px;"></a></div></div>
+<div id="attachment_preview_4909_closed" class="collapse-section-closed collapse-closed" style="display: none;">
+<a href="http://mantisbt.testbase.ru/file_download.php?file_id=4909&amp;type=bug"><i class="fa fa-file-image-o" title="png file icon"></i></a> <a href="http://mantisbt.testbase.ru/file_download.php?file_id=4909&amp;type=bug">Ошибка 404 при вводе спецсимволов.png</a> (51,318 байт)<a class="noprint" href="http://mantisbt.testbase.ru/bug_file_delete.php?file_id=4909&amp;bug_file_delete_token=202111043Ze-DrvGe4ScbAEhb3A-3Q_5LgbzvJOO">
+			<i class="1 ace-icon fa fa-trash-o"></i></a> <a id="attachment_preview_4909_closed_link" class="collapse-link noprint"><i class="fa fa-plus-square-o" title="+"></i></a></div>	</td>
+</tr>
+<tr class="spacer">
+	<td colspan="2"></td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-12 col-xs-12 noprint">
+<a id="addbugnote"></a>
+<div class="space-10"></div>
+
+<form id="bugnoteadd" method="post" action="bugnote_add.php" enctype="multipart/form-data">
+	<input type="hidden" name="bugnote_add_token" value="20211104tDIF2gvFvUsIVXrVQICClnNndUvD8Kkb">	<input type="hidden" name="bug_id" value="3203">
+	<div id="bugnote_add" class="widget-box widget-color-blue2 ">
+		<div class="widget-header widget-header-small">
+			<h4 class="widget-title lighter">
+				<i class="ace-icon fa fa-comment"></i>
+				Добавить комментарий			</h4>
+			<div class="widget-toolbar">
+				<a data-action="collapse" href="#">
+					<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="widget-body">
+		<div class="widget-main no-padding">
+
+		<div class="table-responsive">
+		<table class="table table-bordered table-condensed">
+		<tbody>
+
+			<tr>
+				<th class="category">
+					Видимость				</th>
+				<td>
+				<label for="bugnote_add_view_status">
+					<input type="checkbox" class="ace" id="bugnote_add_view_status" name="private">
+					<span class="lbl padding-6">приватная</span>
+				</label>
+				</td>
+			</tr>
+
+			<tr>
+				<th class="category" width="15%">
+					Комментарий				</th>
+				<td width="85%">
+					<textarea name="bugnote_text" id="bugnote_text" class="form-control" rows="7"></textarea>
+				</td>
+			</tr>
+
+			<tr id="bugnote-attach-files" style="">
+				<th class="category">
+					Загрузить файлы					<br>
+					<span class="small" title="5,000,000 байт">Размер до: 5,000 Кб</span>				</th>
+				<td>
+					<input type="hidden" name="max_file_size" value="5000000">
+					<div class="dropzone center dz-clickable" data-force-fallback="false" data-max-filesize="5" data-accepted-files="" data-default-message="Для загрузки перетащите файлы сюда (или щелкните мышкой)" data-fallback-message="Ваш браузер не поддерживает загрузку файлов через перетаскивание." data-fallback-text="" data-file-too-big="Файл слишком большой ({{filesize}}MiB). Максимальный размер файла: {{maxFilesize}}MiB." data-invalid-file-type="Вы не можете загружать файлы с этим расширением." data-response-error="Сервер ответил с кодом {{statusCode}}." data-cancel-upload="Отменить загрузку" data-cancel-upload-confirmation="Вы уверены, что хотите отменить эту загрузку?" data-remove-file="Удалить файл" data-remove-file-confirmation="" data-max-files-exceeded="Вы не можете загрузить больше файлов." data-dropzone-not-supported="Dropzone.js не поддерживает старые браузеры!">
+						<i class="upload-icon ace-icon fa fa-cloud-upload blue fa-3x"></i><br>
+						<span class="bigger-150 grey">Для загрузки перетащите файлы сюда (или щелкните мышкой)</span>
+						<div id="dropzone-previews-box" class="dz dropzone-previews dz-max-files-reached"></div>
+					</div>
+					
+				</td>
+			</tr>
+		</tbody>
+</table>
+</div>
+</div>
+	<div class="widget-toolbox padding-8 clearfix">
+		<input type="submit" class="btn btn-primary btn-white btn-round" value="Добавить">
+	</div>
+</div>
+</div>
+</form>
+</div>
+
+    <div class="col-md-12 col-xs-12">
+        <a id="history"></a>
+        <div class="space-10"></div>
+
+<div id="history" class="widget-box widget-color-blue2 ">
+<div class="widget-header widget-header-small">
+	<h4 class="widget-title lighter">
+		<i class="ace-icon fa fa-history"></i>
+		История изменений	</h4>
+	<div class="widget-toolbar">
+		<a data-action="collapse" href="#">
+			<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+		</a>
+	</div>
+</div>
+<div class="widget-body">
+<div class="widget-main no-padding">
+<div class="table-responsive">
+<table class="table table-bordered table-condensed table-hover table-striped">
+	<thead>
+		<tr>
+			<th class="small-caption">
+				Дата изменения			</th>
+			<th class="small-caption">
+				Пользователь			</th>
+			<th class="small-caption">
+				Поле			</th>
+			<th class="small-caption">
+				Изменить			</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr>
+			<td class="small-caption">
+				2021-07-02 18:16			</td>
+			<td class="small-caption">
+				<a href="http://mantisbt.testbase.ru/view_user_page.php?id=1012">student_kewin</a>			</td>
+			<td class="small-caption">
+				Новая задача			</td>
+			<td class="small-caption">
+							</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2021-07-02 18:16			</td>
+			<td class="small-caption">
+				<a href="http://mantisbt.testbase.ru/view_user_page.php?id=1012">student_kewin</a>			</td>
+			<td class="small-caption">
+				Состояние			</td>
+			<td class="small-caption">
+				новая =&gt; назначена			</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2021-07-02 18:16			</td>
+			<td class="small-caption">
+				<a href="http://mantisbt.testbase.ru/view_user_page.php?id=1012">student_kewin</a>			</td>
+			<td class="small-caption">
+				Ответственный			</td>
+			<td class="small-caption">
+				 =&gt; yulia_mironova			</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2021-07-02 18:16			</td>
+			<td class="small-caption">
+				<a href="http://mantisbt.testbase.ru/view_user_page.php?id=1012">student_kewin</a>			</td>
+			<td class="small-caption">
+				Файл добавлен: Ошибка 404 при вводе спецсимволов.png			</td>
+			<td class="small-caption">
+							</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2021-07-02 18:21			</td>
+			<td class="small-caption">
+				<a href="http://mantisbt.testbase.ru/view_user_page.php?id=1012">student_kewin</a>			</td>
+			<td class="small-caption">
+				Тема			</td>
+			<td class="small-caption">
+				Ошибка 404 при вводе спецсимволов в строку Поиска =&gt; <b>Ошибка 404 при вводе спецсимволов в строку Поиска</b>			</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2021-07-02 18:21			</td>
+			<td class="small-caption">
+				<a href="http://mantisbt.testbase.ru/view_user_page.php?id=1012">student_kewin</a>			</td>
+			<td class="small-caption">
+				Шаги по воспроизведению изменены			</td>
+			<td class="small-caption">
+				<a href="http://mantisbt.testbase.ru/bug_revision_view_page.php?rev_id=10823#r10823">Просмотр редакций</a>			</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2021-07-02 18:31			</td>
+			<td class="small-caption">
+				<a href="http://mantisbt.testbase.ru/view_user_page.php?id=1012">student_kewin</a>			</td>
+			<td class="small-caption">
+				Тема			</td>
+			<td class="small-caption">
+				<b>Ошибка 404 при вводе спецсимволов в строку Поиска</b> =&gt; При вводе спецсимволов в строку Поиска появляется сообщение об ошибке 404			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="space-20"></div>
+<div class="footer noprint">
+<div class="footer-inner">
+<div class="footer-content">
+<div class="col-md-6 col-xs-12 no-padding">
+<address>
+<strong>Powered by <a href="https://www.mantisbt.org/" title="bug tracking software">MantisBT </a></strong> <br>
+<small>Copyright © 2000 - 2021 MantisBT Team</small><br><small>Для получения помощи вы можете <a href="mailto:webmaster@example.com" title="Написать веб-мастеру по эл. почте">связаться с администратором</a>.</small><br>
+</address>
+</div>
+<div class="col-md-6 col-xs-12">
+<div class="pull-right" id="powered-by-mantisbt-logo">
+<a href="https://www.mantisbt.org/" title="Mantis Bug Tracker: a free and open source web based bug tracking system."><img src="Bug_3203_%20MantisBT_files/mantis_logo.png" alt="Powered by Mantis Bug Tracker: a free and open source web based bug tracking system." width="102" height="35"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="btn-scroll-up btn btn-sm btn-inverse" id="btn-scroll-up" href="#">
+<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+</a>
+</div>
+	<script type="text/javascript" src="Bug_3203_%20MantisBT_files/bootstrap-3.js"></script>
+	<script type="text/javascript" src="Bug_3203_%20MantisBT_files/moment-with-locales-2.js"></script>
+	<script type="text/javascript" src="Bug_3203_%20MantisBT_files/bootstrap-datetimepicker-4.js"></script>
+	<script type="text/javascript" src="Bug_3203_%20MantisBT_files/typeahead.js"></script>
+	<script type="text/javascript" src="Bug_3203_%20MantisBT_files/list-1.js"></script>
+	<script type="text/javascript" src="Bug_3203_%20MantisBT_files/ace.js"></script>
+
+
+<input type="file" multiple="multiple" class="dz-hidden-input" accept="" style="visibility: hidden; position: absolute; top: 0px; left: 0px; height: 0px; width: 0px;"></body></html>

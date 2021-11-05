@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>3399 – При вводе спецсимволов в строку Поиска появляется сообщение об ошибке 404</title>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="Bug_Bugzilla_3399_files/54486398487c111ba3305277d0702e66.css" rel="stylesheet" type="text/css">
+
+
+
+    
+<script type="text/javascript" src="Bug_Bugzilla_3399_files/01d1b8200ec3d6070e858c3636a8f000.js"></script>
+
+    <script type="text/javascript">
+    <!--
+        YAHOO.namespace('bugzilla');
+        YAHOO.util.Event.addListener = function (el, sType, fn, obj, overrideContext) {
+               if ( ("onpagehide" in window || YAHOO.env.ua.gecko) && sType === "unload") { sType = "pagehide"; };
+               var capture = ((sType == "focusin" || sType == "focusout") && !YAHOO.env.ua.ie) ? true : false;
+               return this._addListener(el, this._getType(sType), fn, obj, overrideContext, capture);
+         };
+        if ( "onpagehide" in window || YAHOO.env.ua.gecko) {
+            YAHOO.util.Event._simpleRemove(window, "unload", 
+                                           YAHOO.util.Event._unload);
+        }
+        
+        function unhide_language_selector() { 
+            YAHOO.util.Dom.removeClass(
+                'lang_links_container', 'bz_default_hidden'
+            ); 
+        } 
+        YAHOO.util.Event.onDOMReady(unhide_language_selector);
+
+        
+        var BUGZILLA = {
+            param: {
+                cookiepath: '\/',
+                maxusermatches: 1000
+            },
+            constant: {
+                COMMENT_COLS: 80
+            },
+            string: {
+                
+
+                attach_desc_required:
+                    "You must enter a Description for this attachment.",
+                component_required:
+                    "You must select a Component for this bug.",
+                description_required:
+                    "You must enter a Description for this bug.",
+                short_desc_required:
+                    "You must enter a Summary for this bug.",
+                version_required:
+                    "You must select a Version for this bug."
+            }
+              , api_token: '1dgTzlwtHZ'
+        };
+
+    if (history && history.replaceState) {
+      if(!document.location.href.match(/show_bug\.cgi/)) {
+        history.replaceState( null,
+                             "3399 – При вводе спецсимволов в строку Поиска появляется сообщение об ошибке 404",
+                             "show_bug.cgi?id=3399" );
+        document.title = "3399 – При вводе спецсимволов в строку Поиска появляется сообщение об ошибке 404";
+      }
+      if (document.location.href.match(/show_bug\.cgi\?.*list_id=/)) {
+        var href = document.location.href;
+        href = href.replace(/[\?&]+list_id=(\d+|cookie)/, '');
+        history.replaceState(null, "3399 – При вводе спецсимволов в строку Поиска появляется сообщение об ошибке 404", href);
+      }
+    }
+    YAHOO.util.Event.onDOMReady(function() {
+      initDirtyFieldTracking();
+
+        YAHOO.bugzilla.bugUserLastVisit.update(3399);
+    });
+    // -->
+    </script>
+<script type="text/javascript" src="Bug_Bugzilla_3399_files/78b0d9928c58ed4fbe8d18b6c6a1945b.js"></script>
+
+    
+
+    
+    <link rel="search" type="application/opensearchdescription+xml" title="Bugzilla" href="http://bugzilla.testbase.ru/search_plugin.cgi">
+    <link rel="shortcut icon" href="http://bugzilla.testbase.ru/images/favicon.ico">
+  <script src="Bug_Bugzilla_3399_files/prompt.js"></script></head>
+
+  <body class="
+                 bz_bug
+                 bz_status_CONFIRMED
+                 bz_product_TestProduct
+                 bz_component_TestComponent
+                 bz_bug_3399 yui-skin-sam">
+
+  <div id="header"><div id="banner">
+  </div>
+
+    <div id="titles">
+      <span id="title">Bugzilla – Bug&nbsp;3399</span>
+
+        <span id="subtitle" class="subheader">При вводе спецсимволов в строку Поиска появляется сообщение об ошибке 404</span>
+
+        <span id="information" class="header_addl_info">Last modified: 2021-07-12 01:36:27 MSK</span>
+    </div>
+
+
+    <div id="common_links"><ul class="links">
+  <li><a href="http://bugzilla.testbase.ru/">Home</a></li>
+  <li><span class="separator">| </span><a href="http://bugzilla.testbase.ru/enter_bug.cgi">New</a></li>
+  <li><span class="separator">| </span><a href="http://bugzilla.testbase.ru/describecomponents.cgi">Browse</a></li>
+  <li><span class="separator">| </span><a href="http://bugzilla.testbase.ru/query.cgi">Search</a></li>
+
+  <li class="form">
+    <span class="separator">| </span>
+    <form action="buglist.cgi" method="get" onsubmit="if (this.quicksearch.value == '')
+                  { alert('Please enter one or more search terms first.');
+                    return false; } return true;">
+    <input type="hidden" id="no_redirect_top" name="no_redirect" value="1">
+    <script type="text/javascript">
+      if (history && history.replaceState) {
+        var no_redirect = document.getElementById("no_redirect_top");
+        no_redirect.value = 1;
+      }
+    </script>
+    <input class="txt" type="text" id="quicksearch_top" name="quicksearch" title="Quick Search">
+    <input class="btn" type="submit" value="Search" id="find_top"></form>
+  <a href="http://bugzilla.testbase.ru/page.cgi?id=quicksearch.html" title="Quicksearch Help">[?]</a></li>
+
+  <li><span class="separator">| </span><a href="http://bugzilla.testbase.ru/report.cgi">Reports</a></li>
+
+  <li></li>
+
+
+    <li><span class="separator">| </span><a href="http://bugzilla.testbase.ru/userprefs.cgi">Preferences</a></li>
+      <li><span class="separator">| </span><a href="http://bugzilla.testbase.ru/admin.cgi">Administration</a></li>
+<li>
+        <span class="separator">| </span>
+        <a href="https://bugzilla.readthedocs.org/en/5.0/using/understanding.html" target="_blank">Help</a>
+      </li>
+
+    <li>
+      <span class="separator">| </span>
+        <a href="http://bugzilla.testbase.ru/index.cgi?logout=1">Log&nbsp;out</a>
+        kewin.a@yandex.ru</li>
+</ul>
+    </div>
+  </div>
+
+  <div id="bugzilla-body">
+
+<div class="navigation">
+  <b>Bug List:</b>
+
+  (183 of 500)
+
+    <a href="http://bugzilla.testbase.ru/show_bug.cgi?id=3594&amp;list_id=7579">First</a>
+
+    <a href="http://bugzilla.testbase.ru/show_bug.cgi?id=3088&amp;list_id=7579">Last</a>
+
+    <a href="http://bugzilla.testbase.ru/show_bug.cgi?id=3400&amp;list_id=7579">Prev</a>
+
+    <a href="http://bugzilla.testbase.ru/show_bug.cgi?id=3402&amp;list_id=7579">Next</a>
+
+  &nbsp;&nbsp;<a href="http://bugzilla.testbase.ru/buglist.cgi?regetlastlist=7579">Show last search results</a>
+  </div>
+<div id="bz_ctag_div" class="bz_default_hidden">
+      <a href="javascript:void(0)" onclick="YAHOO.bugzilla.commentTagging.hideInput()">x</a>
+      <div class="yui-ac">
+        <input id="bz_ctag_add" size="10" placeholder="add tag" maxlength="24" class="yui-ac-input" autocomplete="off">
+        <span id="bz_ctag_autocomp" class="yui-ac-container"><div class="yui-ac-content" style="display: none;"><div class="yui-ac-hd" style="display: none;"></div><div class="yui-ac-bd"><ul><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li></ul></div><div class="yui-ac-ft" style="display: none;"></div></div></span>
+      </div>
+      &nbsp;
+    </div>
+    <div id="bz_ctag_error" class="bz_default_hidden">
+      <a href="javascript:void(0)" onclick="YAHOO.bugzilla.commentTagging.hideError()">x</a>
+      <span id="bz_ctag_error_msg"></span>
+    </div>
+    <script type="text/javascript">
+      YAHOO.bugzilla.commentTagging.init(true);
+      YAHOO.bugzilla.commentTagging.min_len = 3;
+      YAHOO.bugzilla.commentTagging.max_len = 24;
+      YAHOO.bugzilla.commentTagging.label = 'Comment Tags:';
+      YAHOO.bugzilla.commentTagging.min_len_error =
+        'Comment tags must be at least 3 characters.';
+      YAHOO.bugzilla.commentTagging.max_len_error =
+        'Comment tags cannot be longer than 24 characters.';
+    </script>
+
+<script type="text/javascript">
+<!--
+  var bz_remaining_time = 0.00;
+
+  /* Index all classifications so we can keep track of the classification
+   * for the selected product, which could control field visibility.
+   */
+  var all_classifications = new Array(1);
+      all_classifications['TestProduct'] = 'Unclassified';
+//-->
+</script>
+
+<form name="changeform" id="changeform" method="post" action="process_bug.cgi">
+
+  <input type="hidden" name="delta_ts" value="2021-07-12 01:36:27">
+  <input type="hidden" name="id" value="3399">
+  <input type="hidden" name="token" value="1636050815-avOV2rWf3XtLoVUBJU8f3BywjSfsdqNclR4rqkEuNyQ">
+<div class="bz_short_desc_container edit_form"><div class="knob-buttons">
+      <input type="submit" value="Save Changes" id="commit_top">
+    </div>
+     <a href="http://bugzilla.testbase.ru/show_bug.cgi?id=3399"><b>Bug&nbsp;3399</b></a> <span id="summary_container">
+      - <span id="short_desc_nonedit_display">При вводе спецсимволов в строку Поиска появляется сообщение об ошибке 404</span>
+        <small>(<a href="#" id="summary_edit_action">edit</a>)</small>
+     </span>
+
+    <div id="summary_input" class="bz_default_hidden"><span class="field_label " id="field_label_short_desc">
+
+    <label for="short_desc" accesskey="s">
+
+  <a title="The bug summary is a short sentence which succinctly describes what the bug is about." class="field_help_link" href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#short_desc">Summary:</a>
+</label>
+</span><input id="short_desc" name="short_desc" class="text_input" value="При вводе спецсимволов в строку Поиска появляется сообщение об ошибке 404" size="80" maxlength="255" spellcheck="true">
+    </div>
+  </div>
+  <script type="text/javascript">
+    hideEditableField('summary_container',
+                      'summary_input',
+                      'summary_edit_action',
+                      'short_desc',
+                      'При вводе спецсимволов в строку Поиска появляется сообщение об ошибке 404' );
+  </script>
+  <table class="edit_form">
+    <tbody><tr>
+      
+      <td id="bz_show_bug_column_1" class="bz_show_bug_column">     
+        <table>
+          <tbody><tr>
+    <th class="field_label">
+      <a href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#bug_status">Status</a>:
+    </th>
+    <td id="bz_field_status">
+      <span id="static_bug_status">CONFIRMED
+          (<a href="#add_comment" onclick="window.setTimeout(function() { document.getElementById('bug_status').focus(); }, 10)">edit</a>)
+      </span>
+    </td>
+  </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label " id="field_label_alias">
+
+
+  <a title="A short, unique name assigned to a bug in order to assist with looking it up and referring to it in other places in Bugzilla." class="field_help_link" href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#alias">Alias:</a>
+
+</th>
+    <td>
+        None
+        <span id="alias_edit_area_showhide_container">
+          (<a href="#" id="alias_edit_area_showhide">edit</a>)
+        </span>
+        <br>
+        <div id="alias_edit_area" class="bz_default_hidden">
+          <div>
+            <label for="newalias" class="field_label">Add</label>
+            <br>
+            <input name="newalias" id="newalias" size="20">
+          </div>
+        </div>
+        <script type="text/javascript">
+          hideEditableField( 'alias_edit_area_showhide_container',
+                             'alias_edit_area',
+                             'alias_edit_area_showhide',
+                             '',
+                             '');
+        </script>
+    </td>
+  </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label " id="field_label_product">
+
+    <label for="product">
+
+  <a title="Bugs are categorised into Products and Components." class="field_help_link" href="http://bugzilla.testbase.ru/describecomponents.cgi">Product:</a>
+</label>
+</th>
+  <td class="field_value " id="field_container_product">
+      
+        <input type="hidden" id="product_dirty">
+        <select id="product" name="product">
+            <option value="TestProduct" id="v1_product" selected="selected">TestProduct</option>
+        </select>
+        
+
+      <script type="text/javascript">
+        <!--
+          initHidingOptionsForIE('product');
+          
+        //-->
+      </script>
+
+
+</td>
+    </tr>
+
+    
+    <tr class="bz_default_hidden"><th class="field_label " id="field_label_classification">
+
+    <label for="classification">
+
+  <a title="Bugs are categorised into Classifications, Products and Components. classifications is the top-level categorisation." class="field_help_link" href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#classification">Classification:</a>
+</label>
+</th>
+  <td class="field_value " id="field_container_classification">
+      
+        <input type="hidden" id="classification_dirty">
+        <select id="classification" name="classification">
+            <option value="Unclassified" id="v1_classification" selected="selected">Unclassified</option>
+        </select>
+        
+
+      <script type="text/javascript">
+        <!--
+          initHidingOptionsForIE('classification');
+          YAHOO.util.Event.on('product', 'change', setClassification);
+        //-->
+      </script>
+
+
+</td>
+    </tr>
+        
+    
+    
+    <tr><th class="field_label " id="field_label_component">
+
+    <label for="component">
+
+  <a title="Components are second-level categories; each belongs to a particular Product. Select a Product to narrow down this list." class="field_help_link" href="http://bugzilla.testbase.ru/describecomponents.cgi?product=TestProduct">Component:</a>
+</label>
+</th>
+  <td class="field_value " id="field_container_component">
+      
+        <input type="hidden" id="component_dirty">
+        <select id="component" name="component">
+            <option value="TestComponent" id="v1_component" selected="selected">TestComponent</option>
+        </select>
+        
+
+      <script type="text/javascript">
+        <!--
+          initHidingOptionsForIE('component');
+          
+        //-->
+      </script>
+
+
+  (<a href="http://bugzilla.testbase.ru/buglist.cgi?component=TestComponent&amp;product=TestProduct&amp;bug_status=__open__" target="_blank">show other bugs</a>)
+</td>
+    </tr>
+    <tr><th class="field_label " id="field_label_version">
+
+    <label for="version">
+
+  <a title="The version field defines the version of the software the bug was found in." class="field_help_link" href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#version">Version:</a>
+</label>
+</th>
+<td>unspecified
+  </td>
+    </tr>
+        
+    
+        
+    <tr><th class="field_label " id="field_label_rep_platform">
+
+    <label for="rep_platform" accesskey="h">
+
+  <a title="The hardware platform the bug was observed on. Note: When searching, selecting the option &quot;All&quot; only finds bugs whose value for this field is literally the word &quot;All&quot;." class="field_help_link" href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#rep_platform">Hardware:</a>
+</label>
+</th>
+      <td class="field_value"><input type="hidden" id="rep_platform_dirty">
+        <select id="rep_platform" name="rep_platform">
+            <option value="All" id="v1_rep_platform">All</option>
+            <option value="PC" id="v2_rep_platform" selected="selected">PC</option>
+            <option value="Macintosh" id="v3_rep_platform">Macintosh</option>
+            <option value="Other" id="v4_rep_platform">Other</option>
+        </select>
+        
+
+      <script type="text/javascript">
+        <!--
+          initHidingOptionsForIE('rep_platform');
+          
+        //-->
+      </script>
+        <input type="hidden" id="op_sys_dirty">
+        <select id="op_sys" name="op_sys">
+            <option value="All" id="v1_op_sys">All</option>
+            <option value="Windows" id="v2_op_sys" selected="selected">Windows</option>
+            <option value="Mac OS" id="v3_op_sys">Mac OS</option>
+            <option value="Linux" id="v4_op_sys">Linux</option>
+            <option value="Other" id="v5_op_sys">Other</option>
+        </select>
+        
+
+      <script type="text/javascript">
+        <!--
+          initHidingOptionsForIE('op_sys');
+          
+        //-->
+      </script>
+      </td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          
+          <tr>
+      <th class="field_label">
+        <label for="priority" accesskey="i">
+          <a href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#importance"><u>I</u>mportance</a></label>:
+      </th>
+      <td><input type="hidden" id="priority_dirty">
+        <select id="priority" name="priority">
+            <option value="Highest" id="v1_priority">Highest</option>
+            <option value="High" id="v2_priority">High</option>
+            <option value="Normal" id="v3_priority">Normal</option>
+            <option value="Low" id="v4_priority">Low</option>
+            <option value="Lowest" id="v5_priority">Lowest</option>
+            <option value="---" id="v6_priority" selected="selected">---</option>
+        </select>
+        
+
+      <script type="text/javascript">
+        <!--
+          initHidingOptionsForIE('priority');
+          
+        //-->
+      </script>
+       <input type="hidden" id="bug_severity_dirty">
+        <select id="bug_severity" name="bug_severity">
+            <option value="blocker" id="v1_bug_severity">blocker</option>
+            <option value="critical" id="v2_bug_severity">critical</option>
+            <option value="major" id="v3_bug_severity">major</option>
+            <option value="normal" id="v4_bug_severity">normal</option>
+            <option value="minor" id="v5_bug_severity" selected="selected">minor</option>
+            <option value="trivial" id="v6_bug_severity">trivial</option>
+            <option value="enhancement" id="v7_bug_severity">enhancement</option>
+        </select>
+        
+
+      <script type="text/javascript">
+        <!--
+          initHidingOptionsForIE('bug_severity');
+          
+        //-->
+      </script>
+      </td>
+    </tr>
+          
+          <tr><th class="field_label " id="field_label_assigned_to">
+
+    <label for="assigned_to">
+
+  <a title="The person in charge of resolving the bug." class="field_help_link" href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#assigned_to">Assignee:</a>
+</label>
+</th>
+      <td>
+          <div id="bz_assignee_edit_container" class="">
+            <span><span class="vcard"><a class="email" href="mailto:admin@hflabs.ru" title="admin &lt;admin@hflabs.ru&gt;"> <span class="fn">admin</span></a>
+</span>
+              (<a href="#" id="bz_assignee_edit_action">edit</a>)
+                (<a title="Reassign to yourself" href="#" id="bz_assignee_take_action">take</a>)
+            </span>
+          </div>
+          <div id="bz_assignee_input" class="bz_default_hidden"><div id="assigned_to_autocomplete" class="bz_userfield yui-ac">  
+  <input name="assigned_to" value="admin@hflabs.ru" class="bz_userfield yui-ac-input" size="30" id="assigned_to" autocomplete="off">
+    <div id="assigned_to_autocomplete_container" class="yui-ac-container"><div class="yui-ac-content" style="display: none;"><div class="yui-ac-hd" style="display: none;"></div><div class="yui-ac-bd"><ul><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li></ul></div><div class="yui-ac-ft" style="display: none;"></div></div></div>
+    </div>  
+    <script type="text/javascript">
+      if( typeof(YAHOO.bugzilla.userAutocomplete) !== 'undefined' 
+          && YAHOO.bugzilla.userAutocomplete != null){
+        YAHOO.bugzilla.userAutocomplete.init( "assigned_to", 
+                    "assigned_to_autocomplete_container");        
+      }
+    </script>
+            <br>
+            <input type="checkbox" id="set_default_assignee" name="set_default_assignee" value="1">
+            <label id="set_default_assignee_label" for="set_default_assignee" style="font-weight: normal;">Reset Assignee to default</label>
+          </div>
+          <script type="text/javascript">
+           hideEditableField('bz_assignee_edit_container', 
+                             'bz_assignee_input', 
+                             'bz_assignee_edit_action', 
+                             'assigned_to', 
+                             'admin\x40hflabs.ru' );
+           hideEditableField('bz_assignee_edit_container',
+                             'bz_assignee_input',
+                             'bz_assignee_take_action',
+                             'assigned_to',
+                             'admin\x40hflabs.ru',
+                             'kewin.a\x40yandex.ru' );
+           initDefaultCheckbox('assignee');                  
+          </script>
+      </td>
+    </tr>
+
+    <script type="text/javascript">
+      assignToDefaultOnChange(['product', 'component'],
+        'admin\x40hflabs.ru',
+        '');
+    </script>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          <tr><th class="field_label " id="field_label_bug_file_loc">
+
+    <label for="bug_file_loc" accesskey="u">
+
+  <a title="Bugs can have a URL associated with them - for example, a pointer to a web site where the problem is seen." class="field_help_link" href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#bug_file_loc">URL:</a>
+</label>
+</th>
+    <td>
+        <span id="bz_url_edit_container" class="bz_default_hidden"> 
+        (<a href="#" id="bz_url_edit_action">edit</a>)</span>
+      <span id="bz_url_input_area"><input id="bug_file_loc" name="bug_file_loc" class="text_input" size="40">
+      </span>
+        <script type="text/javascript">
+          hideEditableField('bz_url_edit_container', 
+                            'bz_url_input_area', 
+                            'bz_url_edit_action', 
+                            'bug_file_loc', 
+                            "");
+        </script>
+    </td>
+  </tr>
+
+
+
+    <tr><th class="field_label " id="field_label_tag">
+
+    <label for="tag">
+
+  <a title="Unlike Keywords which are global and visible by all users, Personal Tags are personal and can only be viewed and edited by their author. Editing them won't send any notification to other users. Use them to tag and keep track of bugs." class="field_help_link" href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#tag">Personal Tags:</a>
+</label>
+</th>
+  <td class="field_value " id="field_container_tag">
+       <div id="tag_container" class="yui-ac">
+         <input type="text" id="tag" size="40" class="text_input yui-ac-input" name="tag" autocomplete="off">
+         <div id="tag_autocomplete" class="yui-ac-container"><div class="yui-ac-content" style="display: none;"><div class="yui-ac-hd" style="display: none;"></div><div class="yui-ac-bd"><ul><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li></ul></div><div class="yui-ac-ft" style="display: none;"></div></div></div>
+       </div>
+       <script type="text/javascript">
+         if (typeof YAHOO.bugzilla.field_array === "undefined")
+           YAHOO.bugzilla.field_array = [];
+         YAHOO.bugzilla.field_array["tag"] = ["строка поиска спортсменов","search","hearthstone exit crash","pictureinsteadofvideo","hearthstone entry block","postamats ozon quantity","карта","double_keyboard","booking","double","currency","пилки","#junistat #js","lingualeo","www.nespresso.com\/us","google drive scrollbar","infinity","lovchy","строка поиска","поиск","локация интерфейса","captcha","string comment disappear","каталог","баг","advanced ip scanner","латиница","graph"];
+         YAHOO.bugzilla.fieldAutocomplete.init('tag',
+                                               'tag_autocomplete');
+       </script>
+
+</td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+
+          
+<tr><th class="field_label " id="field_label_dependson">
+
+
+  <a title="The bugs listed here must be resolved before this bug can be resolved." class="field_help_link" href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#dependson">Depends on:</a>
+
+</th>
+
+  <td>
+    <span id="dependson_input_area">
+        <input name="dependson" id="dependson" class="text_input">
+    </span>
+
+      <span id="dependson_edit_container" class="edit_me bz_default_hidden">
+        (<a href="#" id="dependson_edit_action">edit</a>)
+      </span>
+      <script type="text/javascript">
+        hideEditableField('dependson_edit_container', 
+                          'dependson_input_area', 
+                          'dependson_edit_action', 
+                          'dependson', 
+                          '');
+      </script>
+  </td>
+  </tr>
+  
+  <tr><th class="field_label " id="field_label_blocked">
+
+
+  <a title="This bug must be resolved before the bugs listed in this field can be resolved." class="field_help_link" href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#blocked">Blocks:</a>
+
+</th>
+
+  <td>
+    <span id="blocked_input_area">
+        <input name="blocked" id="blocked" class="text_input">
+    </span>
+
+      <span id="blocked_edit_container" class="edit_me bz_default_hidden">
+        (<a href="#" id="blocked_edit_action">edit</a>)
+      </span>
+      <script type="text/javascript">
+        hideEditableField('blocked_edit_container', 
+                          'blocked_input_area', 
+                          'blocked_edit_action', 
+                          'blocked', 
+                          '');
+      </script>
+  </td>
+  </tr>
+          
+        </tbody></table>
+      </td>
+      <td>
+        <div class="bz_column_spacer">&nbsp;</div>
+      </td>
+      
+      <td id="bz_show_bug_column_2" class="bz_show_bug_column">
+        <table>
+        <tbody><tr>
+    <th class="field_label">
+      Reported:
+    </th>
+    <td>2021-07-11 17:37 MSK by <span class="vcard"><a class="email" href="mailto:kewin.a@yandex.ru" title="Student &lt;kewin.a@yandex.ru&gt;"> <span class="fn">Student</span></a>
+</span>
+    </td>
+  </tr>
+  
+  <tr>
+    <th class="field_label">
+      Modified:
+    </th>
+    <td>2021-07-12 01:36 MSK
+      (<a href="http://bugzilla.testbase.ru/show_activity.cgi?id=3399">History</a>)
+    </td>
+  
+  </tr>
+<tr>
+      <th class="field_label">
+        <label for="newcc" accesskey="a">
+          CC List:
+        </label>
+      </th>
+      <td>
+            <input type="checkbox" id="addselfcc" name="addselfcc">
+            <label for="addselfcc">Add me to CC list</label>
+            <br> 0 
+          users
+          <span id="cc_edit_area_showhide_container">
+            (<a href="#" id="cc_edit_area_showhide">edit</a>)
+          </span>
+        <div id="cc_edit_area" class="bz_default_hidden">
+          <br>
+            <div>
+              <div><label for="cc"><b>Add</b></label></div><div id="newcc_autocomplete" class="bz_userfield yui-ac">  
+  <input name="newcc" class="bz_userfield yui-ac-input" size="30" id="newcc" autocomplete="off">
+    <div id="newcc_autocomplete_container" class="yui-ac-container"><div class="yui-ac-content" style="display: none;"><div class="yui-ac-hd" style="display: none;"></div><div class="yui-ac-bd"><ul><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li></ul></div><div class="yui-ac-ft" style="display: none;"></div></div></div>
+    </div>  
+    <script type="text/javascript">
+      if( typeof(YAHOO.bugzilla.userAutocomplete) !== 'undefined' 
+          && YAHOO.bugzilla.userAutocomplete != null){
+        YAHOO.bugzilla.userAutocomplete.init( "newcc", 
+                    "newcc_autocomplete_container", true);        
+      }
+    </script>
+            </div>
+        </div>
+          <script type="text/javascript">
+            hideEditableField( 'cc_edit_area_showhide_container', 
+                               'cc_edit_area', 
+                               'cc_edit_area_showhide', 
+                               '', 
+                               '');  
+          </script>
+      </td>
+    </tr>
+<tr>
+      <th class="field_label">
+        <label for="bug_ignored" title="Ignore all email for this bug">
+          Ignore Bug Mail:
+        </label>
+      </th>
+      <td>
+        <input type="hidden" name="defined_bug_ignored" value="1">
+        <span title="You will still receive emails for flag requests directed at you.">
+          <input type="checkbox" name="bug_ignored" id="bug_ignored" value="1">
+          (never email me about this bug)
+        </span>
+      </td>
+    </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label " id="field_label_see_also">
+
+    <label for="see_also">
+
+  <a title="This allows you to refer to bugs in other installations. You can enter a URL to a bug in the 'Add Bug URLs' field to note that that bug is related to this one. You can enter multiple URLs at once by separating them with whitespace. You should normally use this field to refer to bugs in other installations. For bugs in this installation, it is better to use the Depends on and Blocks fields." class="field_help_link" href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#see_also">See Also:</a>
+</label>
+</th>
+  <td class="field_value " id="field_container_see_also">
+         <span id="container_showhide_see_also">
+           (<a href="#" id="showhide_see_also">add</a>)
+         </span>
+         <div id="container_see_also" class="bz_default_hidden">
+           <input type="text" id="see_also" size="40" class="text_input" name="see_also">
+         </div>
+           <script type="text/javascript">
+             setupEditLink('see_also');
+           </script>
+
+</td>
+    </tr> 
+
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+
+
+
+        </tbody></table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+          <hr id="bz_top_half_spacer">
+      </td>
+    </tr>
+  </tbody></table>
+
+  <table id="bz_big_form_parts">
+  <tbody><tr>
+  <td><table class="bz_time_tracking_table">
+    <tbody><tr><th class="field_label " id="field_label_estimated_time">
+
+    <label for="estimated_time">
+
+  <a title="The amount of time that has been estimated it will take to resolve this bug." class="field_help_link" href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#estimated_time">Orig. Est.:</a>
+</label>
+</th>
+      <th>
+        Current Est.:
+      </th><th class="field_label " id="field_label_work_time">
+
+    <label for="work_time">
+
+  <a title="The total amount of time spent on this bug so far." class="field_help_link" href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#work_time">Hours Worked:</a>
+</label>
+</th><th class="field_label " id="field_label_remaining_time">
+
+    <label for="remaining_time">
+
+  <a title="The number of hours of work left on this bug, calculated by subtracting the Hours Worked from the Orig. Est.." class="field_help_link" href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#remaining_time">Hours Left:</a>
+</label>
+</th><th class="field_label " id="field_label_percentage_complete">
+
+
+  <a title="How close to 100% done this bug is, by comparing its Hours Worked to its Orig. Est.." class="field_help_link" href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#percentage_complete">%Complete:</a>
+
+</th>
+      <th>
+        Gain:
+      </th><th class="field_label " id="field_label_deadline">
+
+    <label for="deadline">
+
+  <a title="The date that this bug must be resolved by, entered in YYYY-MM-DD format." class="field_help_link" href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#deadline">Deadline:</a>
+</label>
+</th>
+    </tr>
+    <tr>
+      <td>
+        <input name="estimated_time" id="estimated_time" value="0.0" size="6" maxlength="6">
+      </td>
+      <td>0.0
+      </td>
+      <td>0.0 +
+        <input name="work_time" id="work_time" value="0" size="3" maxlength="6" onchange="adjustRemainingTime();">
+      </td>
+      <td>
+        <input name="remaining_time" id="remaining_time" value="0.0" size="6" maxlength="6" onchange="updateRemainingTime();">
+      </td>
+      <td>0
+      </td>
+      <td>0.0
+      </td>
+       <td><input name="deadline" size="20" id="deadline" onchange="updateCalendarFromField(this)">
+      <button type="button" class="calendar_button" id="button_calendar_deadline" onclick="showCalendar('deadline')">
+        <span>Calendar</span>
+      </button>
+
+      <div id="con_calendar_deadline" class="yui-calcontainer single"><table class="yui-calendar y2021" id="calendar_deadline" cellspacing="0">
+<thead>
+<tr>
+<th colspan="7" class="calhead">
+<div class="calheader">
+<a class="calnavleft" href="#">Previous Month (October 2021)</a>
+November 2021
+<a class="calnavright" href="#">Next Month (December 2021)</a>
+</div>
+</th>
+</tr>
+<tr class="calweekdayrow">
+<th class="calweekdaycell">Su</th>
+<th class="calweekdaycell">Mo</th>
+<th class="calweekdaycell">Tu</th>
+<th class="calweekdaycell">We</th>
+<th class="calweekdaycell">Th</th>
+<th class="calweekdaycell">Fr</th>
+<th class="calweekdaycell">Sa</th>
+</tr>
+</thead>
+<tbody class="m11 calbody">
+<tr class="w45">
+<td class="calcell oom calcelltop calcellleft" id="calendar_deadline_cell0">31</td>
+<td class="calcell wd1 d1 selectable calcelltop" id="calendar_deadline_cell1"><a href="#" class="selector">1</a></td>
+<td class="calcell wd2 d2 selectable calcelltop" id="calendar_deadline_cell2"><a href="#" class="selector">2</a></td>
+<td class="calcell wd3 d3 selectable calcelltop" id="calendar_deadline_cell3"><a href="#" class="selector">3</a></td>
+<td class="calcell wd4 d4 today selectable calcelltop" id="calendar_deadline_cell4"><a href="#" class="selector">4</a></td>
+<td class="calcell wd5 d5 selectable calcelltop" id="calendar_deadline_cell5"><a href="#" class="selector">5</a></td>
+<td class="calcell wd6 d6 selectable calcelltop calcellright" id="calendar_deadline_cell6"><a href="#" class="selector">6</a></td>
+</tr>
+<tr class="w46">
+<td class="calcell wd0 d7 selectable calcellleft" id="calendar_deadline_cell7"><a href="#" class="selector">7</a></td>
+<td class="calcell wd1 d8 selectable" id="calendar_deadline_cell8"><a href="#" class="selector">8</a></td>
+<td class="calcell wd2 d9 selectable" id="calendar_deadline_cell9"><a href="#" class="selector">9</a></td>
+<td class="calcell wd3 d10 selectable" id="calendar_deadline_cell10"><a href="#" class="selector">10</a></td>
+<td class="calcell wd4 d11 selectable" id="calendar_deadline_cell11"><a href="#" class="selector">11</a></td>
+<td class="calcell wd5 d12 selectable" id="calendar_deadline_cell12"><a href="#" class="selector">12</a></td>
+<td class="calcell wd6 d13 selectable calcellright" id="calendar_deadline_cell13"><a href="#" class="selector">13</a></td>
+</tr>
+<tr class="w47">
+<td class="calcell wd0 d14 selectable calcellleft" id="calendar_deadline_cell14"><a href="#" class="selector">14</a></td>
+<td class="calcell wd1 d15 selectable" id="calendar_deadline_cell15"><a href="#" class="selector">15</a></td>
+<td class="calcell wd2 d16 selectable" id="calendar_deadline_cell16"><a href="#" class="selector">16</a></td>
+<td class="calcell wd3 d17 selectable" id="calendar_deadline_cell17"><a href="#" class="selector">17</a></td>
+<td class="calcell wd4 d18 selectable" id="calendar_deadline_cell18"><a href="#" class="selector">18</a></td>
+<td class="calcell wd5 d19 selectable" id="calendar_deadline_cell19"><a href="#" class="selector">19</a></td>
+<td class="calcell wd6 d20 selectable calcellright" id="calendar_deadline_cell20"><a href="#" class="selector">20</a></td>
+</tr>
+<tr class="w48">
+<td class="calcell wd0 d21 selectable calcellleft" id="calendar_deadline_cell21"><a href="#" class="selector">21</a></td>
+<td class="calcell wd1 d22 selectable" id="calendar_deadline_cell22"><a href="#" class="selector">22</a></td>
+<td class="calcell wd2 d23 selectable" id="calendar_deadline_cell23"><a href="#" class="selector">23</a></td>
+<td class="calcell wd3 d24 selectable" id="calendar_deadline_cell24"><a href="#" class="selector">24</a></td>
+<td class="calcell wd4 d25 selectable" id="calendar_deadline_cell25"><a href="#" class="selector">25</a></td>
+<td class="calcell wd5 d26 selectable" id="calendar_deadline_cell26"><a href="#" class="selector">26</a></td>
+<td class="calcell wd6 d27 selectable calcellright" id="calendar_deadline_cell27"><a href="#" class="selector">27</a></td>
+</tr>
+<tr class="w49">
+<td class="calcell wd0 d28 selectable calcellleft" id="calendar_deadline_cell28"><a href="#" class="selector">28</a></td>
+<td class="calcell wd1 d29 selectable" id="calendar_deadline_cell29"><a href="#" class="selector">29</a></td>
+<td class="calcell wd2 d30 selectable" id="calendar_deadline_cell30"><a href="#" class="selector">30</a></td>
+<td class="calcell oom" id="calendar_deadline_cell31">1</td>
+<td class="calcell oom" id="calendar_deadline_cell32">2</td>
+<td class="calcell oom" id="calendar_deadline_cell33">3</td>
+<td class="calcell oom calcellright" id="calendar_deadline_cell34">4</td>
+</tr>
+<tr class="w50">
+<td class="calcell oom calcellleft calcellbottom" id="calendar_deadline_cell35">5</td>
+<td class="calcell oom calcellbottom" id="calendar_deadline_cell36">6</td>
+<td class="calcell oom calcellbottom" id="calendar_deadline_cell37">7</td>
+<td class="calcell oom calcellbottom" id="calendar_deadline_cell38">8</td>
+<td class="calcell oom calcellbottom" id="calendar_deadline_cell39">9</td>
+<td class="calcell oom calcellbottom" id="calendar_deadline_cell40">10</td>
+<td class="calcell oom calcellright calcellbottom" id="calendar_deadline_cell41">11</td>
+</tr>
+</tbody>
+</table></div>
+
+      <script type="text/javascript">
+        <!--
+          createCalendar('deadline');
+        //--></script>
+      </td>        
+    </tr>
+    <tr>
+      <td colspan="7" class="bz_summarize_time">
+        <a href="http://bugzilla.testbase.ru/summarize_time.cgi?id=3399&amp;do_depends=1">
+        Summarize time (including time for bugs
+        blocking this bug)</a>
+      </td>
+    </tr>
+  </tbody></table>
+
+    
+<script type="text/javascript">
+<!--
+function toggle_display(link) {
+    var table = document.getElementById("attachment_table");
+    var view_all = document.getElementById("view_all");
+    var hide_obsolete_url_parameter = "&hide_obsolete=1";
+    // Store current height for scrolling later
+    var originalHeight = table.offsetHeight;
+    var rows = YAHOO.util.Dom.getElementsByClassName(
+        'bz_tr_obsolete', 'tr', table);
+
+    for (var i = 0; i < rows.length; i++) {
+        bz_toggleClass(rows[i], 'bz_default_hidden');
+    }
+
+    if (YAHOO.util.Dom.hasClass(rows[0], 'bz_default_hidden')) {
+        link.innerHTML = "Show Obsolete";
+        view_all.href = view_all.href + hide_obsolete_url_parameter 
+    }
+    else {
+        link.innerHTML = "Hide Obsolete";
+        view_all.href = view_all.href.replace(hide_obsolete_url_parameter,"");
+    }
+
+    var newHeight = table.offsetHeight;
+    // This scrolling makes the window appear to not move at all.
+    window.scrollBy(0, newHeight - originalHeight);
+
+    return false;
+}
+//-->
+</script>
+
+<br>
+<table id="attachment_table">
+  <tbody><tr id="a0">
+    <th colspan="2" class="left">
+      Attachments
+    </th>
+  </tr>
+
+
+      <tr id="a1" class="bz_contenttype_image_png">
+        <td>
+            <a href="http://bugzilla.testbase.ru/attachment.cgi?id=2431" title="View the content of the attachment">
+          <b>Ошибка 404 при вводе спецсимволов</b></a>
+
+          <span class="bz_attach_extra_info">
+              (56.43 KB,
+                image/png)
+
+            <br>
+            <a href="#attach_2431" title="Go to the comment associated with the attachment">2021-07-11 17:37 MSK</a>,
+
+            <span class="vcard"><a class="email" href="mailto:kewin.a@yandex.ru" title="Student &lt;kewin.a@yandex.ru&gt;"> <span class="fn">Student</span></a>
+</span>
+          </span>
+        </td>
+
+
+        <td>
+          <a href="http://bugzilla.testbase.ru/attachment.cgi?id=2431&amp;action=edit">Details</a>
+        </td>
+      </tr>
+
+  <tr class="bz_attach_footer">
+    <td colspan="2">
+        <span class="bz_attach_view_hide">
+        </span>
+        <a href="http://bugzilla.testbase.ru/attachment.cgi?bugid=3399&amp;action=enter">Add an attachment</a>
+        (proposed patch, testcase, etc.)
+    </td>
+  </tr>
+</tbody></table>
+<br>
+<div id="add_comment" class="bz_section_additional_comments">
+      <label for="comment" accesskey="c"><b>Additional 
+        <u>C</u>omments</b></label>:
+
+
+      <!-- This table keeps the submit button aligned with the box. -->
+      <table><tbody><tr><td><div id="comment_tabs" role="tablist">
+    <div id="comment_tab" class="comment_tab active_comment_tab" role="tab" aria-selected="true" onclick="show_comment_edit()">Comment</div>
+    <div id="comment_preview_tab" class="comment_tab" role="tab" aria-selected="false" onclick="show_comment_preview(3399)">Preview</div>
+  </div>
+<textarea name="comment" id="comment" rows="10" cols="80" onfocus="this.rows=25"></textarea>
+
+  <div id="comment_preview" class="bz_default_hidden bz_comment">
+    <div id="comment_preview_loading" class="bz_default_hidden">Generating Preview...</div>
+    <div id="comment_preview_error" class="bz_default_hidden"></div>
+    <pre id="comment_preview_text" class="bz_comment_text"></pre>
+  </div>
+        <br><div class="knob-buttons">
+      <input type="submit" value="Save Changes" id="commit">
+    </div>
+
+
+        <table id="bug_status_bottom" class="status">
+          <tbody><tr>
+            <th class="field_label">
+              <a href="http://bugzilla.testbase.ru/page.cgi?id=fields.html#bug_status">Status</a>:
+            </th>
+            <td><div id="status"><input type="hidden" id="bug_status_dirty">
+        <select id="bug_status" name="bug_status">
+            <option value="CONFIRMED" id="v2_bug_status" selected="selected">CONFIRMED</option>
+            <option value="IN_PROGRESS" id="v3_bug_status">IN_PROGRESS</option>
+            <option value="RESOLVED" id="v4_bug_status">RESOLVED</option>
+        </select>
+        
+
+      <script type="text/javascript">
+        <!--
+          initHidingOptionsForIE('bug_status');
+          
+        //-->
+      </script>
+
+    <noscript><br>resolved&nbsp;as&nbsp;</noscript>
+
+  <span id="resolution_settings" class="bz_default_hidden"><input type="hidden" id="resolution_dirty" value="">
+        <select id="resolution" name="resolution">
+            <option value="" selected="selected"></option><option value="FIXED" id="v2_resolution">FIXED</option>
+            <option value="INVALID" id="v3_resolution">INVALID</option>
+            <option value="WONTFIX" id="v4_resolution">WONTFIX</option>
+            <option value="DUPLICATE" id="v5_resolution">DUPLICATE</option>
+            <option value="WORKSFORME" id="v6_resolution">WORKSFORME</option>
+        </select>
+        
+
+      <script type="text/javascript">
+        <!--
+          initHidingOptionsForIE('resolution');
+          
+        //-->
+      </script>
+  </span>
+
+    <noscript><br> duplicate</noscript>
+    <span id="duplicate_settings" class="bz_default_hidden">of
+      <span id="dup_id_container" class="bz_default_hidden">&lt;missing&gt;
+        (<a href="#" id="dup_id_edit_action">edit</a>)
+      </span><input id="dup_id" name="dup_id" size="6">
+    </span>
+    <div id="dup_id_discoverable" class="">
+      <a href="#" id="dup_id_discoverable_action">Mark as Duplicate</a>
+    </div>
+</div>
+
+<script type="text/javascript">
+  var close_status_array = [
+      'RESOLVED'
+  ];
+  YAHOO.util.Dom.removeClass('dup_id_discoverable', 'bz_default_hidden');
+  hideEditableField( "dup_id_container", "dup_id", 'dup_id_edit_action',
+                     'dup_id', '' )
+  showHideStatusItems( "",  ['',
+                             'CONFIRMED']);
+  YAHOO.util.Event.addListener( 'bug_status', "change", showHideStatusItems,
+                                ['',
+                                 'CONFIRMED']);
+  YAHOO.util.Event.addListener( 'resolution', "change", showDuplicateItem);
+  YAHOO.util.Event.addListener( 'dup_id_discoverable_action',
+                                'click',
+                                setResolutionToDuplicate,
+                                'RESOLVED');
+  YAHOO.util.Event.addListener( window, 'load',  showHideStatusItems,
+                              ['',
+                               'CONFIRMED'] );
+
+</script>
+            </td>
+          </tr>
+        </tbody></table>
+      </td></tr></tbody></table>
+
+    
+  </div>
+  </td>
+  <td>
+  </td>
+  </tr></tbody></table>
+
+  
+  <div id="comments"><script src="Bug_Bugzilla_3399_files/comments.js" type="text/javascript">
+</script>
+
+<script type="text/javascript">
+<!--
+  /* Adds the reply text to the 'comment' textarea */
+  function replyToComment(id, real_id, name) {
+      var prefix = "(In reply to " + name + " from comment #" + id + ")\n";
+      var replytext = "";
+        /* pre id="comment_name_N" */
+        var text_elem = document.getElementById('comment_text_'+id);
+        var text = getText(text_elem);
+        replytext = prefix + wrapReplyText(text);
+
+
+      /* <textarea id="comment"> */
+      var textarea = document.getElementById('comment');
+      if (textarea.value != replytext) {
+          textarea.value += replytext;
+      }
+
+      textarea.focus();
+  } 
+//-->
+</script>
+
+
+<!-- This auto-sizes the comments and positions the collapse/expand links 
+     to the right. -->
+<table class="bz_comment_table">
+<tbody><tr>
+<td>
+<div id="c0" class="bz_comment bz_first_comment">
+
+      <div class="bz_first_comment_head">
+          <span class="bz_comment_actions">
+                [<a href="#" onclick="YAHOO.bugzilla.commentTagging.toggle(4793, 0);return false">tag</a>]
+              [<a class="bz_reply_link" href="#add_comment" onclick="replyToComment('0', '4793', 'Student'); return false;">reply</a>]
+            <script type="text/javascript">
+              addCollapseLink(0, 0, 'Toggle comment display');
+            </script> <a href="#" class="bz_collapse_comment" id="comment_link_0" onclick="toggle_comment_display(this, 0); return false;" title="Toggle comment display">[−]</a> 
+          </span>
+
+
+        <span class="bz_comment_number">
+          <a href="http://bugzilla.testbase.ru/show_bug.cgi?id=3399#c0">Description</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><a class="email" href="mailto:kewin.a@yandex.ru" title="Student &lt;kewin.a@yandex.ru&gt;"> <span class="fn">Student</span></a>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2021-07-11 17:37:48 MSK
+        </span>
+
+      </div>
+
+
+        <div id="comment_tag_0" class="bz_comment_tags">
+          <span id="ct_0" class="bz_default_hidden">
+          </span>
+        </div>
+
+
+<pre class="bz_comment_text" id="comment_text_0">Created <span class=""><a href="http://bugzilla.testbase.ru/attachment.cgi?id=2431" name="attach_2431" title="Ошибка 404 при вводе спецсимволов">attachment 2431</a> <a href="http://bugzilla.testbase.ru/attachment.cgi?id=2431&amp;action=edit" title="Ошибка 404 при вводе спецсимволов">[details]</a></span>
+Ошибка 404 при вводе спецсимволов
+
+1. Открыть сайт <a href="https://tabletka.by/">https://tabletka.by/</a>
+2. Ввести в строку поиска запрос со спецсимволами « :)(*_ »
+3. Нажать ввод
+
+Фактический результат: На странице сайта сообщение «404 Страница не найдена. Запрашиваемая вами страница не существует или у вас оказалась неверная ссылка. Попробуйте начать с начала.»
+
+Ожидаемый результат: Сообщение: « По вашему запросу ничего не найдено.»</pre>
+    </div>
+
+    <div id="c1" class="bz_comment">
+
+      <div class="bz_comment_head">
+          <span class="bz_comment_actions">
+                [<a href="#" onclick="YAHOO.bugzilla.commentTagging.toggle(4797, 1);return false">tag</a>]
+              [<a class="bz_reply_link" href="#add_comment" onclick="replyToComment('1', '4797', 'Student'); return false;">reply</a>]
+            <script type="text/javascript">
+              addCollapseLink(1, 0, 'Toggle comment display');
+            </script> <a href="#" class="bz_collapse_comment" id="comment_link_1" onclick="toggle_comment_display(this, 1); return false;" title="Toggle comment display">[−]</a> 
+          </span>
+
+
+        <span class="bz_comment_number">
+          <a href="http://bugzilla.testbase.ru/show_bug.cgi?id=3399#c1">Comment 1</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><a class="email" href="mailto:kewin.a@yandex.ru" title="Student &lt;kewin.a@yandex.ru&gt;"> <span class="fn">Student</span></a>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2021-07-12 01:26:13 MSK
+        </span>
+
+      </div>
+
+
+        <div id="comment_tag_1" class="bz_comment_tags">
+          <span id="ct_1" class="bz_default_hidden">
+          </span>
+        </div>
+
+
+<pre class="bz_comment_text" id="comment_text_1">Шаги по воспроизведению:
+1. Открыть сайт <a href="https://tabletka.by/">https://tabletka.by/</a>
+2. Ввести в строку поиска запрос со спецсимволами « :)(*_ »
+3. Нажать ввод
+
+Фактический результат: 
+На странице сайта сообщение «404 Страница не найдена. Запрашиваемая вами страница не существует или у вас оказалась неверная ссылка. Попробуйте начать с начала.»
+
+Ожидаемый результат: 
+Сообщение: « По вашему запросу ничего не найдено.»</pre>
+    </div>
+
+    <div id="c2" class="bz_comment">
+
+      <div class="bz_comment_head">
+          <span class="bz_comment_actions">
+                [<a href="#" onclick="YAHOO.bugzilla.commentTagging.toggle(4798, 2);return false">tag</a>]
+              [<a class="bz_reply_link" href="#add_comment" onclick="replyToComment('2', '4798', 'Student'); return false;">reply</a>]
+            <script type="text/javascript">
+              addCollapseLink(2, 0, 'Toggle comment display');
+            </script> <a href="#" class="bz_collapse_comment" id="comment_link_2" onclick="toggle_comment_display(this, 2); return false;" title="Toggle comment display">[−]</a> 
+          </span>
+
+
+        <span class="bz_comment_number">
+          <a href="http://bugzilla.testbase.ru/show_bug.cgi?id=3399#c2">Comment 2</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><a class="email" href="mailto:kewin.a@yandex.ru" title="Student &lt;kewin.a@yandex.ru&gt;"> <span class="fn">Student</span></a>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2021-07-12 01:36:27 MSK
+        </span>
+
+      </div>
+
+
+        <div id="comment_tag_2" class="bz_comment_tags">
+          <span id="ct_2" class="bz_default_hidden">
+          </span>
+        </div>
+
+
+<pre class="bz_comment_text" id="comment_text_2">(In reply to Student from <a href="http://bugzilla.testbase.ru/show_bug.cgi?id=3399#c0">comment #0</a>)
+<span class="quote">&gt; Created <span class=""><a href="http://bugzilla.testbase.ru/attachment.cgi?id=2431" name="attach_2431" title="Ошибка 404 при вводе спецсимволов">attachment 2431</a> <a href="http://bugzilla.testbase.ru/attachment.cgi?id=2431&amp;action=edit" title="Ошибка 404 при вводе спецсимволов">[details]</a></span>
+&gt; Ошибка 404 при вводе спецсимволов
+&gt; Шаги по воспроизведению:
+&gt; 1. Открыть сайт <a href="https://tabletka.by/">https://tabletka.by/</a>
+&gt; 2. Ввести в строку поиска запрос со спецсимволами « :)(*_ »
+&gt; 3. Нажать ввод
+&gt; 
+&gt; Фактический результат: На странице сайта сообщение «404 Страница не найдена.
+&gt; Запрашиваемая вами страница не существует или у вас оказалась неверная
+&gt; ссылка. Попробуйте начать с начала.»
+&gt; 
+&gt; Ожидаемый результат: Сообщение: « По вашему запросу ничего не найдено.»</span></pre>
+    </div>
+
+  <div class="bz_add_comment">
+    <a href="#" onclick="return goto_add_comments();">
+       Add Comment</a>
+  </div>
+
+  
+
+</td>
+<td>
+    <ul class="bz_collapse_expand_comments">
+      <li><a href="#" onclick="toggle_all_comments('collapse');
+                               return false;">Collapse All Comments</a></li>
+      <li><a href="#" onclick="toggle_all_comments('expand');
+                               return false;">Expand All Comments</a></li>
+        <li><div id="comment_tags_collapse_expand_container"></div></li>
+    </ul>
+</td>
+</tr></tbody></table>
+  </div>
+        
+
+</form>
+
+<hr>
+<ul class="related_actions">
+    <li><a href="http://bugzilla.testbase.ru/show_bug.cgi?format=multiple&amp;id=3399">Format For Printing</a></li>
+    <li>&nbsp;-&nbsp;<a href="http://bugzilla.testbase.ru/show_bug.cgi?ctype=xml&amp;id=3399">XML</a></li>
+    <li>&nbsp;-&nbsp;<a href="http://bugzilla.testbase.ru/enter_bug.cgi?cloned_bug_id=3399">Clone This Bug</a></li>
+    
+    <li>&nbsp;-&nbsp;<a href="#">Top of page </a></li>
+    </ul>
+
+  <div class="navigation">
+  <b>Bug List:</b>
+
+  (183 of 500)
+
+    <a href="http://bugzilla.testbase.ru/show_bug.cgi?id=3594&amp;list_id=7579">First</a>
+
+    <a href="http://bugzilla.testbase.ru/show_bug.cgi?id=3088&amp;list_id=7579">Last</a>
+
+    <a href="http://bugzilla.testbase.ru/show_bug.cgi?id=3400&amp;list_id=7579">Prev</a>
+
+    <a href="http://bugzilla.testbase.ru/show_bug.cgi?id=3402&amp;list_id=7579">Next</a>
+
+  &nbsp;&nbsp;<a href="http://bugzilla.testbase.ru/buglist.cgi?regetlastlist=7579">Show last search results</a>
+  </div>
+
+<br>
+</div>
+
+    <div id="footer">
+      <div class="intro"></div>
+<ul id="useful-links">
+  <li id="links-actions"><ul class="links">
+  <li><a href="http://bugzilla.testbase.ru/">Home</a></li>
+  <li><span class="separator">| </span><a href="http://bugzilla.testbase.ru/enter_bug.cgi">New</a></li>
+  <li><span class="separator">| </span><a href="http://bugzilla.testbase.ru/describecomponents.cgi">Browse</a></li>
+  <li><span class="separator">| </span><a href="http://bugzilla.testbase.ru/query.cgi">Search</a></li>
+
+  <li class="form">
+    <span class="separator">| </span>
+    <form action="buglist.cgi" method="get" onsubmit="if (this.quicksearch.value == '')
+                  { alert('Please enter one or more search terms first.');
+                    return false; } return true;">
+    <input type="hidden" id="no_redirect_bottom" name="no_redirect" value="1">
+    <script type="text/javascript">
+      if (history && history.replaceState) {
+        var no_redirect = document.getElementById("no_redirect_bottom");
+        no_redirect.value = 1;
+      }
+    </script>
+    <input class="txt" type="text" id="quicksearch_bottom" name="quicksearch" title="Quick Search">
+    <input class="btn" type="submit" value="Search" id="find_bottom"></form>
+  <a href="http://bugzilla.testbase.ru/page.cgi?id=quicksearch.html" title="Quicksearch Help">[?]</a></li>
+
+  <li><span class="separator">| </span><a href="http://bugzilla.testbase.ru/report.cgi">Reports</a></li>
+
+  <li></li>
+
+
+    <li><span class="separator">| </span><a href="http://bugzilla.testbase.ru/userprefs.cgi">Preferences</a></li>
+      <li><span class="separator">| </span><a href="http://bugzilla.testbase.ru/admin.cgi">Administration</a></li>
+<li>
+        <span class="separator">| </span>
+        <a href="https://bugzilla.readthedocs.org/en/5.0/using/understanding.html" target="_blank">Help</a>
+      </li>
+
+    <li>
+      <span class="separator">| </span>
+        <a href="http://bugzilla.testbase.ru/index.cgi?logout=1">Log&nbsp;out</a>
+        kewin.a@yandex.ru</li>
+</ul>
+  </li>
+
+  
+
+    <li id="links-saved">
+      <ul class="links">
+          <li>
+            <a href="http://bugzilla.testbase.ru/buglist.cgi?resolution=---&amp;emailassigned_to1=1&amp;emailreporter1=1&amp;emailtype1=exact&amp;email1=kewin.a%40yandex.ru">My Bugs</a>
+          </li>
+
+          <li><span class="separator">| </span>
+            <a href="http://bugzilla.testbase.ru/buglist.cgi?cmdtype=runnamed&amp;namedcmd=170">170</a>
+          </li>
+          <li><span class="separator">| </span>
+            <a href="http://bugzilla.testbase.ru/buglist.cgi?cmdtype=runnamed&amp;namedcmd=2690">2690</a>
+          </li>
+          <li><span class="separator">| </span>
+            <a href="http://bugzilla.testbase.ru/buglist.cgi?cmdtype=runnamed&amp;namedcmd=929">929</a>
+          </li>
+          <li><span class="separator">| </span>
+            <a href="http://bugzilla.testbase.ru/buglist.cgi?cmdtype=runnamed&amp;namedcmd=kevinkevin">kevinkevin</a>
+          </li>
+          <li><span class="separator">| </span>
+            <a href="http://bugzilla.testbase.ru/buglist.cgi?cmdtype=runnamed&amp;namedcmd=register">register</a>
+          </li>
+          <li><span class="separator">| </span>
+            <a href="http://bugzilla.testbase.ru/buglist.cgi?cmdtype=runnamed&amp;namedcmd=%D0%BD%D0%B5%D0%BA%D0%BE%D1%80%D1%80%D0%B5%D0%BA%D1%82%D0%BD%D0%BE%D0%B5">некорректное</a>
+          </li>
+          <li><span class="separator">| </span>
+            <a href="http://bugzilla.testbase.ru/buglist.cgi?cmdtype=runnamed&amp;namedcmd=%D1%81%D0%BA%D0%B0%D1%87%D0%BA%D0%B8">скачки</a>
+          </li>
+      </ul>
+    </li>
+
+
+
+  
+</ul>
+
+      <div class="outro"></div>
+    </div>
+
+  
+</body></html>
